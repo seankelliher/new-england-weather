@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherAll.weatherNh();
     weatherAll.weatherRi();
     weatherAll.weatherVt();
+    weatherAll.units();
 });
 
 //The weatherAll object
@@ -236,6 +237,81 @@ weatherAll = {
 
         //invoke the request (it won"t run automatically)
         requestVt.send();
+    },
+
+    //Function to show/hide Farenheit and Celcius
+    units: function () {
+        "use strict";
+
+        //Gather the nav and circles.
+        const nav = document.querySelector("nav");
+        const circleF = document.getElementById("circle-f");
+        const circleB = document.getElementById("circle-b");
+        const circleC = document.getElementById("circle-c");
+
+        //Gather the Farenheit and Celcius elements within sections.
+        const farens = document.getElementsByClassName("faren");
+        const slashes = document.getElementsByClassName("slash");
+        const celcis = document.getElementsByClassName("celci");
+
+        //Makes real arrays from above node lists.
+        const farensArray = Array.from(farens);
+        const slashesArray = Array.from(slashes);
+        const celcisArray = Array.from(celcis);
+
+        //If clicked element is Farenheit, both, Celcius circles.
+        nav.addEventListener("click", function (element) {
+            if (element.target.id === "circle-f") {
+                circleF.style.fill = "#2979FF";
+                circleB.style.fill = "#FFF";
+                circleC.style.fill = "#FFF";
+
+                farensArray.forEach(function (fa) {
+                    fa.style.display = "inline";
+                });
+
+                slashesArray.forEach(function (sl) {
+                    sl.style.display = "none";
+                });
+
+                celcisArray.forEach(function (ce) {
+                    ce.style.display = "none";
+                });
+
+            } else if (element.target.id === "circle-b") {
+                circleB.style.fill = "#2979FF";
+                circleF.style.fill = "#FFF";
+                circleC.style.fill = "#FFF";
+
+                farensArray.forEach(function (fa) {
+                    fa.style.display = "inline";
+                });
+
+                slashesArray.forEach(function (sl) {
+                    sl.style.display = "inline";
+                });
+
+                celcisArray.forEach(function (ce) {
+                    ce.style.display = "inline";
+                });
+            } else if (element.target.id === "circle-c") {
+                circleC.style.fill = "#2979FF";
+                circleF.style.fill = "#FFF";
+                circleB.style.fill = "#FFF";
+
+                farensArray.forEach(function (fa) {
+                    fa.style.display = "none";
+                });
+
+                slashesArray.forEach(function (sl) {
+                    sl.style.display = "none";
+                });
+
+                celcisArray.forEach(function (ce) {
+                    ce.style.display = "inline";
+                });
+            }
+        });
     }
 
 }; //close weatherAll
