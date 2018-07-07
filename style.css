@@ -38,6 +38,10 @@ svg {
     padding: 0;
 }
 
+#circle-f, #circle-b, #circle-c {
+    cursor: pointer;
+}
+
 section {
     width: 60%;
     margin: 0.8em 5%;
@@ -46,6 +50,23 @@ section {
     border-radius: 0.25em;
     box-shadow: 0px 3px 3px 0 #CFD8DC; /*f-offset, v-offset, blur, spread, color*/
     float: left;
+}
+
+footer {
+    width: 90%;
+    margin: 0.8em 0 0 0;
+    padding: 0.2em 5%;
+    background: #2979FF;
+    box-shadow: 0px -3px 3px 0 #CFD8DC; /*h-offset, v-offset, blur, spread, color*/
+    float: left;
+}
+
+#default-faren, #default-celci, #default-both {
+    cursor: pointer;
+}
+
+#default-faren:hover, #default-celci:hover, #default-both:hover {
+    color: #B0BEC5;
 }
 
 p {
@@ -72,5 +93,12 @@ h3 {
     color: #000;
 }
 
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1em;
+    color: #FFF;
+}
+
 /*NOTE: span classes faren, slash, and celci have no unique styles*/
-/*NOTE: id's circle-f, circle-b, circle-c have no unique styles*/
