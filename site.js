@@ -1,7 +1,7 @@
 //The global variable.
 let weatherAll;
 
-//When DOM loads, invoke the six functions below.
+//When DOM loads, invoke the functions below.
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherAll.weatherRi();
     weatherAll.weatherVt();
     weatherAll.units();
+    weatherAll.storage();
 });
 
 //The weatherAll object
@@ -239,7 +240,7 @@ weatherAll = {
         requestVt.send();
     },
 
-    //Function to show/hide Farenheit and Celcius
+    //Function to show/hide Farenheit and Celcius (or display both).
     units: function () {
         "use strict";
 
@@ -259,57 +260,102 @@ weatherAll = {
         const slashesArray = Array.from(slashes);
         const celcisArray = Array.from(celcis);
 
-        //If clicked element is Farenheit, both, Celcius circles.
+        //Function to show only Fahrenheit.
+        function favorFaren() {
+            circleF.style.fill = "#2979FF";
+            circleB.style.fill = "#FFF";
+            circleC.style.fill = "#FFF";
+
+            farensArray.forEach(function (fa) {
+                fa.style.display = "inline";
+            });
+
+            slashesArray.forEach(function (sl) {
+                sl.style.display = "none";
+            });
+
+            celcisArray.forEach(function (ce) {
+                ce.style.display = "none";
+            });
+        }
+
+        //Function to show both Fahrenheit and Celsius.
+        function favorBoth() {
+            circleF.style.fill = "#FFF";
+            circleB.style.fill = "#2979FF";
+            circleC.style.fill = "#FFF";
+
+            farensArray.forEach(function (fa) {
+                fa.style.display = "inline";
+            });
+
+            slashesArray.forEach(function (sl) {
+                sl.style.display = "inline";
+            });
+
+            celcisArray.forEach(function (ce) {
+                ce.style.display = "inline";
+            });
+        }
+
+        //Function to show only Celsius.
+        function favorCelci() {
+            circleF.style.fill = "#FFF";
+            circleB.style.fill = "#FFF";
+            circleC.style.fill = "#2979FF";
+
+            farensArray.forEach(function (fa) {
+                fa.style.display = "none";
+            });
+
+            slashesArray.forEach(function (sl) {
+                sl.style.display = "none";
+            });
+
+            celcisArray.forEach(function (ce) {
+                ce.style.display = "inline";
+            });
+        }
+
+        //Check local storage. If set, invoke matching function above.
+        const favor = localStorage.getItem("favor");
+
+        if (favor === "fahrenheit") {
+            favorFaren();
+        } else if (favor === "both") {
+            favorBoth();
+        } else if (favor === "celsius") {
+            favorCelci();
+        }
+
+        //Monitor nav. If circle clicked, invoke matching function above.
         nav.addEventListener("click", function (element) {
             if (element.target.id === "circle-f") {
-                circleF.style.fill = "#2979FF";
-                circleB.style.fill = "#FFF";
-                circleC.style.fill = "#FFF";
-
-                farensArray.forEach(function (fa) {
-                    fa.style.display = "inline";
-                });
-
-                slashesArray.forEach(function (sl) {
-                    sl.style.display = "none";
-                });
-
-                celcisArray.forEach(function (ce) {
-                    ce.style.display = "none";
-                });
-
+                favorFaren();
             } else if (element.target.id === "circle-b") {
-                circleB.style.fill = "#2979FF";
-                circleF.style.fill = "#FFF";
-                circleC.style.fill = "#FFF";
-
-                farensArray.forEach(function (fa) {
-                    fa.style.display = "inline";
-                });
-
-                slashesArray.forEach(function (sl) {
-                    sl.style.display = "inline";
-                });
-
-                celcisArray.forEach(function (ce) {
-                    ce.style.display = "inline";
-                });
+                favorBoth();
             } else if (element.target.id === "circle-c") {
-                circleC.style.fill = "#2979FF";
-                circleF.style.fill = "#FFF";
-                circleB.style.fill = "#FFF";
+                favorCelci();
+            }
+        });
+    },
 
-                farensArray.forEach(function (fa) {
-                    fa.style.display = "none";
-                });
+    //Function to set local storage.
+    storage: function () {
+        "use strict";
 
-                slashesArray.forEach(function (sl) {
-                    sl.style.display = "none";
-                });
+        //Gather the footer links.
+        const footer = document.querySelector("footer");
 
-                celcisArray.forEach(function (ce) {
-                    ce.style.display = "inline";
-                });
+        //Monitor footer. Whan a link is clicked, do the following.
+        //Developing locally? - in Safari, "Disable local file restrictions"
+        footer.addEventListener("click", function (element) {
+            if (element.target.id === "default-faren") {
+                localStorage.setItem("favor", "fahrenheit");
+            } else if (element.target.id === "default-both") {
+                localStorage.setItem("favor", "both");
+            } else if (element.target.id === "default-celci") {
+                localStorage.setItem("favor", "celsius");
             }
         });
     }
