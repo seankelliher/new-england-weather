@@ -27,7 +27,7 @@ weatherAll = {
         const tempCtC = document.getElementById("temp-ct-c");
 
         //NOAA URL - weather in Hartford, Connecticut
-        const urlCt = "http://w1.weather.gov/xml/current_obs/KHFD.xml";
+        const urlCt = "https://w1.weather.gov/xml/current_obs/KHFD.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestCt = new XMLHttpRequest();
@@ -64,7 +64,7 @@ weatherAll = {
         const tempMeC = document.getElementById("temp-me-c");
 
         //NOAA URL - weather in Augusta, Maine
-        const urlMe = "http://w1.weather.gov/xml/current_obs/KAUG.xml";
+        const urlMe = "https://w1.weather.gov/xml/current_obs/KAUG.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestMe = new XMLHttpRequest();
@@ -101,7 +101,7 @@ weatherAll = {
         const tempMaC = document.getElementById("temp-ma-c");
 
         //NOAA URL - weather in Boston, Massachusetts
-        const urlMa = "http://w1.weather.gov/xml/current_obs/KBOS.xml";
+        const urlMa = "https://w1.weather.gov/xml/current_obs/KBOS.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestMa = new XMLHttpRequest();
@@ -138,7 +138,7 @@ weatherAll = {
         const tempNhC = document.getElementById("temp-nh-c");
 
         //NOAA URL - weather in Concord, New Hampshire
-        const urlNh = "http://w1.weather.gov/xml/current_obs/KCON.xml";
+        const urlNh = "https://w1.weather.gov/xml/current_obs/KCON.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestNh = new XMLHttpRequest();
@@ -175,7 +175,7 @@ weatherAll = {
         const tempRiC = document.getElementById("temp-ri-c");
 
         //NOAA URL - weather in Providence, Rhode Island
-        const urlRi = "http://w1.weather.gov/xml/current_obs/KPVD.xml";
+        const urlRi = "https://w1.weather.gov/xml/current_obs/KPVD.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestRi = new XMLHttpRequest();
@@ -212,7 +212,7 @@ weatherAll = {
         const tempVtC = document.getElementById("temp-vt-c");
 
         //NOAA URL - weather in Montpelier, Vermont
-        const urlVt = "http://w1.weather.gov/xml/current_obs/KMPV.xml";
+        const urlVt = "https://w1.weather.gov/xml/current_obs/KMPV.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
         const requestVt = new XMLHttpRequest();
