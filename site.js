@@ -262,7 +262,7 @@ weatherAll = {
 
         //Function to show only Fahrenheit.
         function favorFaren() {
-            circleF.style.fill = "#b3bc6d";
+            circleF.style.fill = "#d4e157";
             circleB.style.fill = "#FFF";
             circleC.style.fill = "#FFF";
 
@@ -282,7 +282,7 @@ weatherAll = {
         //Function to show both Fahrenheit and Celsius.
         function favorBoth() {
             circleF.style.fill = "#FFF";
-            circleB.style.fill = "#b3bc6d";
+            circleB.style.fill = "#d4e157";
             circleC.style.fill = "#FFF";
 
             farensArray.forEach(function (fa) {
@@ -302,7 +302,7 @@ weatherAll = {
         function favorCelci() {
             circleF.style.fill = "#FFF";
             circleB.style.fill = "#FFF";
-            circleC.style.fill = "#b3bc6d";
+            circleC.style.fill = "#d4e157";
 
             farensArray.forEach(function (fa) {
                 fa.style.display = "none";
