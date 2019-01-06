@@ -69,12 +69,20 @@ footer {
     color: #B0BEC5;
 }
 
-p {
+section p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.5;
     color: #000;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1;
+    color: #FFF;
 }
 
 h1 {
@@ -91,14 +99,6 @@ h2 {
     font-weight: 600;
     line-height: 1.5;
     color: #000;
-}
-
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.875em;
-    font-weight: 400;
-    line-height: 1;
-    color: #FFF;
 }
 
 /*NOTE: span classes faren, slash, and celci have no unique styles*/
