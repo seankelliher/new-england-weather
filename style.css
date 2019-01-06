@@ -3,8 +3,6 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 0;
-    background: #ECEFF1;
-    background: rgba(236, 239, 241, 0.4);
 }
 
 /*Clearfix for #container (accomplished with pseudo-element technique)*/
