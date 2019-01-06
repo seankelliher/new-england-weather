@@ -13,56 +13,27 @@ header {
     position: relative;
 }
 
-nav {
+svg {
+    width: 15%;
     margin: 0;
     padding: 0;
     position: absolute;
     right: 5%;
 }
 
-/*Notes on top positioning*/
-/*H1 font is .875em. Line-height is 1.4 (1.225em or 19.6px). Top/bottom padding for header is .2em (5.6 px).
-/*Height of header is 25.2 px*/
-/*12.6px is center, but subtract 2px for half of circle. 10.6px*/
-/*10.6px / 16px = .6625em*/
-@media all and (min-width: 300px) {
-
-    nav {
-        width: 25%;
-        top: 0.6625em;
-    }
-}
-
-/*Notes on top positioning*/
-/*H1 font is 1.2em. Line-height is 1.4 (26.88 pixels). Top/bottom padding for header is .2em (7.68 pixels).
-/*Height of header is 34.56 pixels*/
-/*17.28 pixels is center, but subtract 2 pixels for half of circle. 15.28 pixels*/
-/*15.28 pixels / 16 pixels = .6625em*/
-@media all and (min-width: 400px) {
-    
-    nav {
-        width: 20%;
-        top: 0.955em;
-    }
-}
-
-svg {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 @media all and (min-width: 300px) {
 
     svg {
-        height: 1.225em; /*equal to line height of h1*/
+        height: 1.225em; /*.875em h1 font-size X 1.4 line-height*/
+        top: 0.8125em; /*height divided by 2 + .2em header padding*/
     }
 }
 
 @media all and (min-width: 400px) {
 
     svg {
-        height: 1.68em; /*equal to line height of h1*/
+        height: 1.68em; /*1.25em h1 font-size X 1.4 line-height*/
+        top: 1.04em; /*height divided by 2 + .2em header padding*/
     }
 }
 
