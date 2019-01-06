@@ -14,17 +14,56 @@ header {
 }
 
 nav {
-    width: 20%;
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 1em;
     right: 5%;
 }
 
+/*Notes on top positioning*/
+/*H1 font is .875em. Line-height is 1.4 (1.225em or 19.6px). Top/bottom padding for header is .2em (5.6 px).
+/*Height of header is 25.2 px*/
+/*12.6px is center, but subtract 2px for half of circle. 10.6px*/
+/*10.6px / 16px = .6625em*/
+@media all and (min-width: 300px) {
+
+    nav {
+        width: 25%;
+        top: 0.6625em;
+    }
+}
+
+/*Notes on top positioning*/
+/*H1 font is 1.2em. Line-height is 1.4 (26.88 pixels). Top/bottom padding for header is .2em (7.68 pixels).
+/*Height of header is 34.56 pixels*/
+/*17.28 pixels is center, but subtract 2 pixels for half of circle. 15.28 pixels*/
+/*15.28 pixels / 16 pixels = .6625em*/
+@media all and (min-width: 400px) {
+    
+    nav {
+        width: 20%;
+        top: 0.955em;
+    }
+}
+
 svg {
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+@media all and (min-width: 300px) {
+
+    svg {
+        height: 1.225em; /*equal to line height of h1*/
+    }
+}
+
+@media all and (min-width: 400px) {
+
+    svg {
+        height: 1.68em; /*equal to line height of h1*/
+    }
 }
 
 #circle-f, #circle-b, #circle-c {
@@ -54,32 +93,83 @@ footer {
     color: #d4e157;
 }
 
+/*Fonts and their media queries*/
 section p {
     font-family: 'Merriweather', serif;
-    font-size: 1.4em;
     font-weight: 400;
     line-height: 1.5;
+}
+
+@media all and (min-width: 300px) { 
+    section p {
+        font-size: 1em;
+    }
+}
+
+@media all and (min-width: 400px) { 
+    section p {
+        font-size: 1.4em;
+    }
 }
 
 footer p {
     font-family: 'Merriweather', serif;
-    font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+}
+
+@media all and (min-width: 300px) {
+
+    footer p {
+        font-size: 0.75em;
+    }
+}
+
+@media all and (min-width: 400px) {
+
+    footer p {
+        font-size: 1em;
+    }
 }
 
 h1 {
     font-family: 'Francois One', sans-serif;
-    font-size: 1.2em;
     font-weight: 400;
     line-height: 1.4;
 }
 
+@media all and (min-width: 300px) {
+
+    h1 {
+        font-size: 0.875em;
+    }
+}
+
+@media all and (min-width: 400px) {
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
+
 h2 {
     font-family: 'Francois One', sans-serif;
-    font-size: 1.1em;
     font-weight: 600;
     line-height: 1.5;
+}
+
+@media all and (min-width: 300px) {
+
+    h2 {
+        font-size: 0.875em;
+    }
+}
+
+@media all and (min-width: 400px) {
+
+    h2 {
+        font-size: 1.1em;
+    }
 }
 
 /*NOTE: span classes faren, slash, and celci have no unique styles*/
