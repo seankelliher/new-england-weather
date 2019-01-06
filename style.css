@@ -3,7 +3,6 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 0;
-    border: 1px solid #eeeeee;
 }
 
 /*Clearfix for #container (accomplished with pseudo-element technique)*/
