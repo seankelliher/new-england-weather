@@ -53,7 +53,7 @@ footer {
     width: 90%;
     margin: 0.8em 0 0 0;
     padding: 0.2em 5%;
-    background: #b3bc6d;
+    background: #5d99c6;
     float: left;
 }
 
@@ -75,10 +75,10 @@ section p {
 
 footer p {
     font-family: 'Merriweather', serif;
-    font-size: 0.875em;
+    font-size: 1em;
     font-weight: 400;
-    line-height: 1;
-    color: #FFF;
+    line-height: 1.5;
+    color: #fff;
 }
 
 h1 {
