@@ -244,8 +244,8 @@ weatherAll = {
     units: function () {
         "use strict";
 
-        //Gather the nav and circles.
-        const nav = document.querySelector("nav");
+        //Gather the svg and circles.
+        const svg = document.querySelector("svg");
         const circleF = document.getElementById("circle-f");
         const circleB = document.getElementById("circle-b");
         const circleC = document.getElementById("circle-c");
@@ -328,8 +328,8 @@ weatherAll = {
             favorCelci();
         }
 
-        //Monitor nav. If circle clicked, invoke matching function above.
-        nav.addEventListener("click", function (element) {
+        //Monitor svg. If circle clicked, invoke matching function above.
+        svg.addEventListener("click", function (element) {
             if (element.target.id === "circle-f") {
                 favorFaren();
             } else if (element.target.id === "circle-b") {
