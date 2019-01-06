@@ -54,7 +54,6 @@ footer {
     margin: 0.8em 0 0 0;
     padding: 0.2em 5%;
     background: #b3bc6d;
-    box-shadow: 0px -3px 3px 0 #CFD8DC; /*h-offset, v-offset, blur, spread, color*/
     float: left;
 }
 
