@@ -340,7 +340,19 @@ weatherAll = {
         });
     },
 
-    //Function to set local storage.
+    //Function to show "SET!" alert. Hide it 3 seconds later.
+    setTxtAlert: function () {
+        "use strict";
+
+        const setTxt = document.getElementById("set-txt");
+
+        setTxt.style.display = "inline";
+        setTimeout(function () {
+            setTxt.style.display = "none";
+        }, 3000);
+    },
+
+    //Function to set local storage. Invoke above function for "SET!" alert.
     storage: function () {
         "use strict";
 
@@ -352,10 +364,13 @@ weatherAll = {
         footer.addEventListener("click", function (element) {
             if (element.target.id === "default-faren") {
                 localStorage.setItem("favor", "fahrenheit");
+                weatherAll.setTxtAlert();
             } else if (element.target.id === "default-both") {
                 localStorage.setItem("favor", "both");
+                weatherAll.setTxtAlert();
             } else if (element.target.id === "default-celci") {
                 localStorage.setItem("favor", "celsius");
+                weatherAll.setTxtAlert();
             }
         });
     }
