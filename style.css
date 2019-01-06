@@ -64,6 +64,10 @@ footer {
     color: #d4e157;
 }
 
+#set-txt {
+    display: none;
+}
+
 /*Fonts and their media queries*/
 section p {
     font-family: 'Merriweather', serif;
