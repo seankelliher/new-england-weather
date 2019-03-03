@@ -329,12 +329,12 @@ weatherAll = {
         }
 
         //Monitor svg. If circle clicked, invoke matching function above.
-        svg.addEventListener("click", function (element) {
-            if (element.target.id === "circle-f") {
+        svg.addEventListener("click", function (event) {
+            if (event.target.id === "circle-f") {
                 favorFaren();
-            } else if (element.target.id === "circle-b") {
+            } else if (event.target.id === "circle-b") {
                 favorBoth();
-            } else if (element.target.id === "circle-c") {
+            } else if (event.target.id === "circle-c") {
                 favorCelci();
             }
         });
@@ -361,14 +361,14 @@ weatherAll = {
 
         //Monitor footer. Whan a link is clicked, do the following.
         //Developing locally? - in Safari, "Disable local file restrictions"
-        footer.addEventListener("click", function (element) {
-            if (element.target.id === "default-faren") {
+        footer.addEventListener("click", function (event) {
+            if (event.target.id === "default-faren") {
                 localStorage.setItem("favor", "fahrenheit");
                 weatherAll.setTxtAlert();
-            } else if (element.target.id === "default-both") {
+            } else if (event.target.id === "default-both") {
                 localStorage.setItem("favor", "both");
                 weatherAll.setTxtAlert();
-            } else if (element.target.id === "default-celci") {
+            } else if (event.target.id === "default-celci") {
                 localStorage.setItem("favor", "celsius");
                 weatherAll.setTxtAlert();
             }
