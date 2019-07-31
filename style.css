@@ -59,10 +59,11 @@ footer {
 
 #default-faren, #default-celci, #default-both {
     cursor: pointer;
+    text-decoration: underline;
 }
 
 #default-faren:hover, #default-celci:hover, #default-both:hover {
-    color: #d4e157;
+    color: #e0e0e0;
 }
 
 #set-txt {
