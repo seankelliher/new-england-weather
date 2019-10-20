@@ -30,16 +30,17 @@ svg {
     float: left;
 }
 
+/*IDs for svg circles.*/
+#circle-f, #circle-b, #circle-c {
+    cursor: pointer;
+}
+
 header {
     width: 90%;
     margin: 0 0 0.8em 0;
     padding: 0.2em 5%;
     background: #cfd8dc; /*blue grey 100*/
     float: left;
-}
-
-#circle-f, #circle-b, #circle-c {
-    cursor: pointer;
 }
 
 section {
@@ -60,6 +61,7 @@ footer {
     float: left;
 }
 
+/*Links in footer.*/
 #default-faren, #default-celci, #default-both {
     cursor: pointer;
     text-decoration: underline;
@@ -73,7 +75,7 @@ footer {
     display: none;
 }
 
-/*Fonts and their media queries*/
+/*Fonts and their media queries.*/
 section p {
     font-family: 'Merriweather', serif;
     font-weight: 400;
@@ -151,5 +153,3 @@ h2 {
         font-size: 1.1em;
     }
 }
-
-/*NOTE: span classes faren, slash, and celci have no unique styles*/
