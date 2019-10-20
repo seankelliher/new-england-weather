@@ -67,11 +67,14 @@ footer {
     text-decoration: underline;
 }
 
+/*Links in footer, hover state.*/
 #default-faren:hover, #default-celci:hover, #default-both:hover {
     color: #ff7043; /*deep orange 400*/
 }
 
+/*In footer. Pops up when users chooses setting for future visits.*/
 #set-txt {
+    color: #ff7043; /*deep orange 400*/
     display: none;
 }
 
