@@ -42,12 +42,6 @@ header {
     cursor: pointer;
 }
 
-main {
-    width: 100%;
-    margin: 0;
-    padding:  0;
-}
-
 section {
     width: 60%;
     margin: 0.8em 5%;
