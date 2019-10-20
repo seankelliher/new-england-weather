@@ -34,8 +34,8 @@ header {
     width: 90%;
     margin: 0 0 0.8em 0;
     padding: 0.2em 5%;
-    background: #0077c2;
-    position: relative;
+    background: #cfd8dc; /*blue grey 100*/
+    float: left;
 }
 
 svg {
