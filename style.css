@@ -38,22 +38,6 @@ header {
     float: left;
 }
 
-@media all and (min-width: 300px) {
-
-    svg {
-        height: 1.225em; /*.875em h1 font-size X 1.4 line-height*/
-        top: 0.8125em; /*height divided by 2 + .2em header padding*/
-    }
-}
-
-@media all and (min-width: 400px) {
-
-    svg {
-        height: 1.68em; /*1.25em h1 font-size X 1.4 line-height*/
-        top: 1.04em; /*height divided by 2 + .2em header padding*/
-    }
-}
-
 #circle-f, #circle-b, #circle-c {
     cursor: pointer;
 }
