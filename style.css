@@ -38,14 +38,6 @@ header {
     float: left;
 }
 
-svg {
-    width: 15%;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 5%;
-}
-
 @media all and (min-width: 300px) {
 
     svg {
