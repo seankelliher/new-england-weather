@@ -7,6 +7,14 @@
     display: flow-root;
 }
 
+nav {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    background: #b0bec5; /*blue grey 200*/
+    float: left;
+}
+
 header {
     width: 90%;
     margin: 0 0 0.8em 0;
