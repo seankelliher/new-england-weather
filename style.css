@@ -82,11 +82,12 @@ section {
 }
 
 footer {
-    width: 90%;
-    margin: 0.8em 0 0 0;
-    padding: 0.2em 5%;
-    background: #cfd8dc; /*blue grey 100*/
-    float: left;
+    width: 95%;
+    margin: 0;
+    padding: 0 2.5%;
+    flex: initial; /*flex: 0 1 auto*/
+    background: #F5F5F5; /*grey 100*/
+    border-top: 1px solid #E0E0E0; /*grey 300*/
 }
 
 /*Links in footer.*/
