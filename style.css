@@ -50,6 +50,18 @@ header {
     border-bottom: 1px solid #E0E0E0; /*grey 300*/
 }
 
+main {
+    width: 95%;
+    margin: 0;
+    padding: 1em 2.5%;
+    flex: initial; /*flex: 0 1 auto*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /*main axis*/
+    align-items: stretch; /*cross axis*/
+    background: #F5F5F5; /*grey 100*/
+}
+
 section {
     width: 60%;
     margin: 0.8em 5%;
