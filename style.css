@@ -90,20 +90,21 @@ footer {
     border-top: 1px solid #E0E0E0; /*grey 300*/
 }
 
-/*Links in footer.*/
-#default-faren, #default-celci, #default-both {
+/*IDs for links in footer.*/
+#default-f, #default-c, #default-b {
     cursor: pointer;
-    text-decoration: underline;
+    color: #0077C2; /*blue 400 dark*/
+    margin: 0 2.5%;
 }
 
-/*Links in footer, hover state.*/
-#default-faren:hover, #default-celci:hover, #default-both:hover {
-    color: #ff7043; /*deep orange 400*/
+/*Links in footer hover state.*/
+#default-f:hover, #default-c:hover, #default-b:hover {
+    text-decoration: underline;
 }
 
 /*In footer. Pops up when users chooses setting for future visits.*/
 #set-txt {
-    color: #ff7043; /*deep orange 400*/
+    color: #C63F17; /*deep orange 400 dark*/
     display: none;
 }
 
