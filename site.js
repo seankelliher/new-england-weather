@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     weatherAll.storage();
 });
 
-//The weatherAll object
+//The weatherAll object.
 weatherAll = {
 
-    //Function for Connecticut weather
+    //Function for Connecticut weather.
     weatherCt: function () {
         "use strict";
 
@@ -26,7 +26,7 @@ weatherAll = {
         const tempCtF = document.getElementById("temp-ct-f");
         const tempCtC = document.getElementById("temp-ct-c");
 
-        //NOAA URL - weather in Hartford, Connecticut
+        //NOAA URL - weather in Hartford, Connecticut.
         const urlCt = "https://w1.weather.gov/xml/current_obs/KHFD.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -51,11 +51,11 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestCt.send();
     },
 
-    //Function for Maine weather
+    //Function for Maine weather.
     weatherMe: function () {
         "use strict";
 
@@ -63,7 +63,7 @@ weatherAll = {
         const tempMeF = document.getElementById("temp-me-f");
         const tempMeC = document.getElementById("temp-me-c");
 
-        //NOAA URL - weather in Augusta, Maine
+        //NOAA URL - weather in Augusta, Maine.
         const urlMe = "https://w1.weather.gov/xml/current_obs/KAUG.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -88,11 +88,11 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestMe.send();
     },
 
-    //Function for Massachusetts weather
+    //Function for Massachusetts weather.
     weatherMa: function () {
         "use strict";
 
@@ -100,7 +100,7 @@ weatherAll = {
         const tempMaF = document.getElementById("temp-ma-f");
         const tempMaC = document.getElementById("temp-ma-c");
 
-        //NOAA URL - weather in Boston, Massachusetts
+        //NOAA URL - weather in Boston, Massachusetts.
         const urlMa = "https://w1.weather.gov/xml/current_obs/KBOS.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -125,11 +125,11 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestMa.send();
     },
 
-    //Function for New Hampshire weather
+    //Function for New Hampshire weather.
     weatherNh: function () {
         "use strict";
 
@@ -137,7 +137,7 @@ weatherAll = {
         const tempNhF = document.getElementById("temp-nh-f");
         const tempNhC = document.getElementById("temp-nh-c");
 
-        //NOAA URL - weather in Concord, New Hampshire
+        //NOAA URL - weather in Concord, New Hampshire.
         const urlNh = "https://w1.weather.gov/xml/current_obs/KCON.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -162,11 +162,11 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestNh.send();
     },
 
-    //Function for Rhode Island weather
+    //Function for Rhode Island weather.
     weatherRi: function () {
         "use strict";
 
@@ -174,7 +174,7 @@ weatherAll = {
         const tempRiF = document.getElementById("temp-ri-f");
         const tempRiC = document.getElementById("temp-ri-c");
 
-        //NOAA URL - weather in Providence, Rhode Island
+        //NOAA URL - weather in Providence, Rhode Island.
         const urlRi = "https://w1.weather.gov/xml/current_obs/KPVD.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -199,11 +199,11 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestRi.send();
     },
 
-    //Function for Vermont weather
+    //Function for Vermont weather.
     weatherVt: function () {
         "use strict";
 
@@ -211,7 +211,7 @@ weatherAll = {
         const tempVtF = document.getElementById("temp-vt-f");
         const tempVtC = document.getElementById("temp-vt-c");
 
-        //NOAA URL - weather in Montpelier, Vermont
+        //NOAA URL - weather in Montpelier, Vermont.
         const urlVt = "https://w1.weather.gov/xml/current_obs/KMPV.xml";
 
         //Iniatiate the XML request. True is Asynchronous Request.
@@ -236,7 +236,7 @@ weatherAll = {
 
         });
 
-        //invoke the request (it won"t run automatically)
+        //invoke the request (it won"t run automatically).
         requestVt.send();
     },
 
@@ -262,7 +262,7 @@ weatherAll = {
 
         //Function to show only Fahrenheit.
         function favorFaren() {
-            circleF.style.fill = "#ff7043";
+            circleF.style.fill = "#FF7043"; //deep orange 400.
             circleB.style.fill = "#FFF";
             circleC.style.fill = "#FFF";
 
@@ -282,7 +282,7 @@ weatherAll = {
         //Function to show both Fahrenheit and Celsius.
         function favorBoth() {
             circleF.style.fill = "#FFF";
-            circleB.style.fill = "#ff7043";
+            circleB.style.fill = "#FF7043"; //deep orange 400.
             circleC.style.fill = "#FFF";
 
             farensArray.forEach(function (fa) {
@@ -302,7 +302,7 @@ weatherAll = {
         function favorCelci() {
             circleF.style.fill = "#FFF";
             circleB.style.fill = "#FFF";
-            circleC.style.fill = "#ff7043";
+            circleC.style.fill = "#FF7043"; //deep orange 400.
 
             farensArray.forEach(function (fa) {
                 fa.style.display = "none";
@@ -360,19 +360,19 @@ weatherAll = {
         const footer = document.querySelector("footer");
 
         //Monitor footer. Whan a link is clicked, do the following.
-        //Developing locally? - in Safari, "Disable local file restrictions"
+        //Developing locally? - in Safari, "Disable local file restrictions".
         footer.addEventListener("click", function (event) {
-            if (event.target.id === "default-faren") {
+            if (event.target.id === "default-f") {
                 localStorage.setItem("favor", "fahrenheit");
                 weatherAll.setTxtAlert();
-            } else if (event.target.id === "default-both") {
+            } else if (event.target.id === "default-b") {
                 localStorage.setItem("favor", "both");
                 weatherAll.setTxtAlert();
-            } else if (event.target.id === "default-celci") {
+            } else if (event.target.id === "default-c") {
                 localStorage.setItem("favor", "celsius");
                 weatherAll.setTxtAlert();
             }
         });
     }
 
-}; //close weatherAll
+}; //close weatherAll.
