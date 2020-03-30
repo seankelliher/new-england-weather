@@ -108,81 +108,50 @@ footer {
     display: none;
 }
 
-/*Fonts and their media queries.*/
-section p {
-    font-family: 'Merriweather', serif;
-    line-height: 1.5;
+/*Fonts*/
+p {
+    font-family: 'Roboto', serif;
+    line-height: 1.8;
     font-weight: 400;
-}
-
-@media all and (min-width: 300px) {
-    section p {
-        font-size: 1em;
-    }
-}
-
-@media all and (min-width: 400px) {
-    section p {
-        font-size: 1.4em;
-    }
-}
-
-footer p {
-    font-family: 'Merriweather', serif;
-    line-height: 1.5;
-    font-weight: 400;
-}
-
-@media all and (min-width: 300px) {
-
-    footer p {
-        font-size: 0.75em;
-    }
-}
-
-@media all and (min-width: 400px) {
-
-    footer p {
-        font-size: 1em;
-    }
 }
 
 h1 {
-    font-family: 'Francois One', sans-serif;
-    line-height: 1.4;
-    font-weight: 400;
-}
-
-@media all and (min-width: 300px) {
-
-    h1 {
-        font-size: 0.875em;
-    }
-}
-
-@media all and (min-width: 400px) {
-
-    h1 {
-        font-size: 1.2em;
-    }
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: 700;
 }
 
 h2 {
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 700;
 }
 
+/*Media queries: 300, 600, 900, 1200*/
 @media all and (min-width: 300px) {
+    p {
+        font-size: .9375em; /*15 pixels*/
+    }
+
+    h1 {
+        font-size: 1.4375em; /*23 pixels*/
+    }
 
     h2 {
-        font-size: 0.875em;
+        font-size: 1.0625em; /*17 pixels*/
     }
 }
 
-@media all and (min-width: 400px) {
+@media all and (min-width: 600px) {
+    p {
+        font-size: 1em; /*16 pixels*/
+    }
+
+    h1 {
+        font-size: 1.5em; /*24 pixels*/
+    }
 
     h2 {
-        font-size: 1.1em;
+        font-size: 1.125em; /*18 pixels*/
     }
 }
