@@ -1,18 +1,13 @@
 //The global variable.
-let weatherAll;
+let weather;
 
 //When DOM loads, invoke the functions below.
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
-    weatherAll.weatherCt();
-    weatherAll.weatherMe();
-    weatherAll.weatherMa();
-    weatherAll.weatherNh();
-    weatherAll.weatherRi();
-    weatherAll.weatherVt();
-    weatherAll.units();
-    weatherAll.storage();
+    weather.getSource();
+    weather.checkLocal();
+    weather.setLocal();
 });
 
 //The weatherAll object.
