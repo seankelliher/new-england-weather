@@ -71,4 +71,43 @@ weather = {
         });
     },
 
+    //Make the XML request to NOAA.
+    makeRequest: function (source, abbr, state) {
+        "use strict";
+
+        //Iniatiate the request. True is Asynchronous Request.
+        const request = new XMLHttpRequest();
+        request.open("GET", source, true);
+
+        //Specify the file type being requested.
+        request.responseType = "xml";
+
+        //When "request" loads and status is "okay" (200)...
+        request.addEventListener("load", function () {
+
+            if (request.status === 200) {
+                //Extract the temperatures.
+                const farenResult = request.responseXML.querySelector("temp_f");
+                const celciResult = request.responseXML.querySelector("temp_c");
+
+                //Determine the matching ids on the page.
+                const farenId = "faren-" + abbr;
+                const celciId = "celci-" + abbr;
+
+                //Retrieve those ids.
+                const farenElement = document.getElementById(farenId);
+                const celciElement = document.getElementById(celciId);
+
+                //Set the text content.
+                farenElement.textContent = farenResult.textContent;
+                celciElement.textContent = celciResult.textContent;
+            } else {
+                window.alert("Data for" + state + "unavailable now.");
+            }
+        });
+
+        //Invoke the request (it won"t run automatically).
+        request.send();
+    },
+
 }; //close weatherAll.
