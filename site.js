@@ -233,4 +233,28 @@ weather = {
         }, 2000);
     },
 
+    //Remove "selected" class.
+    removeSelected: function () {
+        "use strict";
+
+        //Gather all elements that contain the class "selected".
+        const selects = document.querySelectorAll(".selected");
+
+        //Remove them.
+        selects.forEach(function (select) {
+            select.classList.remove("selected");
+        });
+    },
+
+    //Add "selected" class.
+    addSelected: function (x) {
+        "use strict";
+
+        const unit = "unit-" + x;
+
+        //Get the selected element. Add "selected" class.
+        const selected = document.getElementById(unit);
+        selected.classList.add("selected");
+    },
+
 }; //close weatherAll.
