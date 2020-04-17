@@ -54,4 +54,21 @@ weather = {
         }
     ],
 
+    //Get the XML source to pull data from NOAA.
+    getSource: function () {
+        "use strict";
+
+        weather.noaa.forEach(function (index) {
+            const base = "https://w1.weather.gov/xml/current_obs/";
+            const capitol = index.noaaid;
+            const format = ".xml";
+            const source = base + capitol + format;
+            const abbr = index.abbreviation;
+            const state = index.state;
+
+            //Invoke next function, with parameters.
+            weather.makeRequest(source, abbr, state);
+        });
+    },
+
 }; //close weatherAll.
