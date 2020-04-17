@@ -55,6 +55,26 @@ footer {
     flex: initial; /*flex: 0 1 auto*/
 }
 
+/*Class for links in footer.*/
+.units {
+    cursor: pointer;
+    color: #007AC1; /*light blue 500 dark*/
+    margin: 0 2.5%;
+}
+
+/*Class for links in footer hover state.*/
+.units:hover {
+    text-decoration: underline;
+}
+
+/*Selected class*/
+.selected {
+    /*color: #ef5350; red 400*/
+    /*color: #B2DFDB; teal 100*/
+    /*border-top: 1px solid #007AC1; light blue 500 dark*/
+    text-decoration: underline;
+}
+
 /*In footer. Pops up when users chooses setting for future visits.*/
 #set-txt {
     color: #C63F17; /*deep orange 400 dark*/
