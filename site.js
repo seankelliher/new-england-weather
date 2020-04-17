@@ -54,39 +54,4 @@ weather = {
         }
     ],
 
-    //Function to show "SET!" alert. Hide it 3 seconds later.
-    setTxtAlert: function () {
-        "use strict";
-
-        const setTxt = document.getElementById("set-txt");
-
-        setTxt.style.display = "inline";
-        setTimeout(function () {
-            setTxt.style.display = "none";
-        }, 3000);
-    },
-
-    //Function to set local storage. Invoke above function for "SET!" alert.
-    storage: function () {
-        "use strict";
-
-        //Gather the footer links.
-        const footer = document.querySelector("footer");
-
-        //Monitor footer. Whan a link is clicked, do the following.
-        //Developing locally? - in Safari, "Disable local file restrictions".
-        footer.addEventListener("click", function (event) {
-            if (event.target.id === "default-f") {
-                localStorage.setItem("favor", "fahrenheit");
-                weatherAll.setTxtAlert();
-            } else if (event.target.id === "default-b") {
-                localStorage.setItem("favor", "both");
-                weatherAll.setTxtAlert();
-            } else if (event.target.id === "default-c") {
-                localStorage.setItem("favor", "celsius");
-                weatherAll.setTxtAlert();
-            }
-        });
-    }
-
 }; //close weatherAll.
