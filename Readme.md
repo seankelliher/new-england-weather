@@ -1,6 +1,6 @@
 # Current Temperature
 
-This graphic displays the current temperatures in the six New England state capitols. Data is pulled via a XMLHttpRequest from the National Weather Service. The default display shows temperatures in both Fahrenheit and Celsius. Users can switch between showing only Fahrenheit, only Celsius, or both in the header menu. Additionally, there is an option in the footer to set "local storage" so only their preferred unit(s) are displayed on future visits.
+Interactive graphic that displays current temperatures in the six New England state capitols. Data is pulled from the National Weather Service. Users can choose to display temperatures in Farenheit or Celicus - default is both. Choosing a preferred unit (1) changes the immediate display and (2) sets local storage so users see only their preferred unit on return visits.
 
 NOTE: For non-Americans, New England is a region in the Northeast United States. It is comprised of the states: Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.
 
