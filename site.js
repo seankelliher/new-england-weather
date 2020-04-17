@@ -110,4 +110,31 @@ weather = {
         request.send();
     },
 
+    //Check local storage. If set, invoke matching function.
+    checkLocal: function () {
+        "use strict";
+
+        const units = localStorage.getItem("units");
+
+        if (units === "fahrenheit") {
+            weather.showFarenheit();
+            weather.hideSlash();
+            weather.hideCelcius();
+            weather.removeSelected();
+            weather.addSelected("f");
+        } else if (units === "celsius") {
+            weather.hideFarenheit();
+            weather.hideSlash();
+            weather.showCelcius();
+            weather.removeSelected();
+            weather.addSelected("c");
+        } else {
+            weather.showFarenheit();
+            weather.showSlash();
+            weather.showCelcius();
+            weather.removeSelected();
+            weather.addSelected("b");
+        }
+    },
+
 }; //close weatherAll.
