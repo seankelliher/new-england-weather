@@ -257,4 +257,31 @@ weather = {
         selected.classList.add("selected");
     },
 
-}; //close weatherAll.
+    //Set local storage.
+    setLocal: function () {
+        "use strict";
+
+        //Gather the footer element.
+        const footer = document.querySelector("footer");
+
+        //Monitor footer. Whan a link is clicked...
+        //Set local storage. Check local storage. Checking shows/hides temps.
+        //Developing locally? - in Safari, "Disable local file restrictions".
+        footer.addEventListener("click", function (event) {
+            if (event.target.id === "unit-f") {
+                localStorage.setItem("units", "fahrenheit");
+                weather.checkLocal();
+                weather.setTxtAlert();
+            } else if (event.target.id === "unit-c") {
+                localStorage.setItem("units", "celsius");
+                weather.checkLocal();
+                weather.setTxtAlert();
+            } else if (event.target.id === "unit-b") {
+                localStorage.setItem("units", "both");
+                weather.checkLocal();
+                weather.setTxtAlert();
+            }
+        });
+    }
+
+}; //close weather.
