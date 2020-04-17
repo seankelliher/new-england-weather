@@ -75,7 +75,7 @@ footer {
     text-decoration: underline;
 }
 
-/*In footer. Pops up when users chooses setting for future visits.*/
+/*In footer. Pops up when users specifies units.*/
 #set-txt {
     color: #C63F17; /*deep orange 400 dark*/
     display: none;
