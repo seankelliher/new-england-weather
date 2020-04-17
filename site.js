@@ -221,4 +221,16 @@ weather = {
         });
     },
 
+    //Function to show "SET!" alert. Hide it 2 seconds later.
+    setTxtAlert: function () {
+        "use strict";
+
+        const setTxt = document.getElementById("set-txt");
+
+        setTxt.style.display = "inline";
+        setTimeout(function () {
+            setTxt.style.display = "none";
+        }, 2000);
+    },
+
 }; //close weatherAll.
