@@ -14,8 +14,6 @@ header {
     margin: 0;
     padding: .5em 2.5%;
     flex: initial; /*flex: 0 1 auto*/
-    background: #F5F5F5; /*grey 100*/
-    border-bottom: 1px solid #E0E0E0; /*grey 300*/
 }
 
 main {
