@@ -55,18 +55,6 @@ footer {
     flex: initial; /*flex: 0 1 auto*/
 }
 
-/*IDs for links in footer.*/
-#default-f, #default-c, #default-b {
-    cursor: pointer;
-    color: #0077C2; /*blue 400 dark*/
-    margin: 0 2.5%;
-}
-
-/*Links in footer hover state.*/
-#default-f:hover, #default-c:hover, #default-b:hover {
-    text-decoration: underline;
-}
-
 /*In footer. Pops up when users chooses setting for future visits.*/
 #set-txt {
     color: #C63F17; /*deep orange 400 dark*/
