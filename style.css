@@ -77,9 +77,6 @@ footer {
 
 /*Selected class*/
 .selected {
-    /*color: #ef5350; red 400*/
-    /*color: #B2DFDB; teal 100*/
-    /*border-top: 1px solid #007AC1; light blue 500 dark*/
     text-decoration: underline;
 }
 
@@ -109,7 +106,7 @@ h2 {
     color: #BF6517;
 }
 
-/*Media queries: 300, 600, 900, 1200*/
+/*Media queries: 300, 600*/
 @media all and (min-width: 300px) {
     p {
         font-size: .9375em; /*15 pixels*/
