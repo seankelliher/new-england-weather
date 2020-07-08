@@ -33,7 +33,7 @@ section {
     margin: .5em 0;
     padding: .5em 2.5%;
     flex: initial; /*flex: 0 1 auto*/
-    background: #E1F5FE; /*light blue 50*/
+    background: #DFEDF2;
 }
 
 @media all and (min-width: 300px) {
