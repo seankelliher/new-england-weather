@@ -36,6 +36,14 @@ section {
     background: #F2F2F2;
 }
 
+.faren, .celci {
+    color: #402318;
+}
+
+.slash {
+    color: #BDAEBF;
+}
+
 @media all and (min-width: 300px) {
     section {
         width: 95%;
