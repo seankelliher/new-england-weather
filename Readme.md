@@ -5,9 +5,9 @@ Interactive component that displays current temperatures in New England state ca
 
 ## Project Screen Shot(s)
 
-![screen shot of project](/screenshots/header-navigation-screenshot1.jpg)
+![screen shot of project](/screenshots/current-temperature-screenshot1.jpg)
 
-![screen shot of project](/screenshots/header-navigation-screenshot2.jpg)
+![screen shot of project](/screenshots/current-temperature-screenshot2.jpg)
 
 ## Installation and Setup Instructions
 
