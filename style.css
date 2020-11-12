@@ -81,20 +81,22 @@ section {
 }
 
 .slash {
-    color: #BDAEBF;
+    color: #D9D7D7;
 }
 
 footer {
-    width: 95%;
-    margin: 0;
-    padding: .5em 2.5%;
+    width: 80%;
+    margin: 0 auto 1em auto;
+    padding: .5em 5%;
     flex: initial; /*flex: 0 1 auto*/
+    border: 1px solid #D9D7D7;
+    border-radius: 4px;
 }
 
 /*Class for links in footer.*/
 .units {
     cursor: pointer;
-    color: #007AC1; /*light blue 500 dark*/
+    color: #595959;
     margin: 0 2.5%;
 }
 
@@ -110,7 +112,7 @@ footer {
 
 /*In footer. Pops up when users specifies units.*/
 #set-txt {
-    color: #BF6517;
+    color: #F25252;
     display: none;
 }
 
