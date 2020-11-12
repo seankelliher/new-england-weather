@@ -1,30 +1,28 @@
-# Current Temperature
+[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/current-temperature?style=flat-square)](/LICENSE.txt)
+## Current Temperature
 
-Interactive graphic that displays current temperatures in the six New England state capitols. Data is pulled from the National Weather Service. Users can choose to display temperatures in Farenheit or Celicus - default is both. Choosing a preferred unit (1) changes the immediate display and (2) sets local storage so users see only their preferred unit on return visits.
+Interactive component that displays current temperatures in New England state capitols. 
 
-NOTE: For non-Americans, New England is a region in the Northeast United States. It is comprised of the states: Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.
+## Project Screen Shot(s)
 
-## Authors
+![screen shot of project](/screenshots/header-navigation-screenshot1.jpg)
 
-* **Sean Kelliher** - [seankelliher](https://github.com/seankelliher)
+![screen shot of project](/screenshots/header-navigation-screenshot2.jpg)
 
-## Deployment
+## Installation and Setup Instructions
 
-All you need is a web browser. Code works in a local or remote environment.
+This is a static component. All you need is a web browser connected to the internet.
 
-## Built With
+## Reflection
 
-* JavaScript
-* CSS
-* HTML
+For geography, New England is a region in the Northeast United States. It is comprised of the states Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont. The National Weather Service (NWS) is our federal agency for weather. 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+I wanted to build a component that pulls data from the NWS and displays the current temperature in each New England state capitol. Temperatures are displayed in both Fahrenheit and Celsius by default. Users can choose a preferred unit. If they do so, only that unit will display on this and future visits. The future visits part is done with local storage. Challenges for the project were deciphering the NWS's API and trying to make a list of temperatures look visually appealing.
 
 ## Acknowledgments
 
-* Readme file based on [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by Billie Thompson.
-* Weather data from [The National Weather Service](https://www.weather.gov).
-* Design guidance from Google's [Material Design](https://material.io/design).
+* Weather data from [National Weather Service](https://www.weather.gov).
+* Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
+* Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
 * Fonts from [Google Fonts](https://fonts.google.com).
+* Shields from [Shields](https://shields.io).
