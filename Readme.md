@@ -3,7 +3,7 @@
 
 Interactive component that displays current temperatures in New England state capitols. 
 
-## Project Screen Shot(s)
+## Project Screen Shots
 
 ![screen shot of project](/screenshots/current-temperature-screenshot1.jpg)
 
