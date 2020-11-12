@@ -131,12 +131,11 @@ h1 {
 
 h2 {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
+    line-height: 1.2;
     font-weight: 700;
-    color: #BF6517;
+    color: #020659;
 }
 
-/*Media queries: 300, 600*/
 @media all and (min-width: 300px) {
     p {
         font-size: .9375em; /*15 pixels*/
@@ -163,4 +162,13 @@ h2 {
     h2 {
         font-size: 1.125em; /*18 pixels*/
     }
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8125em; /*13 pixels*/
+    line-height: 1.2;
+    font-weight: 700;
+    color: #F25252;
+    text-transform: uppercase;
 }
