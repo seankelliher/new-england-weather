@@ -80,24 +80,8 @@ section {
     }
 }
 
-.faren, .celci {
-    color: #402318;
-}
-
 .slash {
     color: #BDAEBF;
-}
-
-@media all and (min-width: 300px) {
-    section {
-        width: 95%;
-    }
-}
-
-@media all and (min-width: 400px) {
-    section {
-        width: 44%;
-    }
 }
 
 footer {
