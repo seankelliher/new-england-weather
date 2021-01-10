@@ -1,7 +1,11 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/current-temperature?style=flat-square)](/LICENSE.txt)
 ## Current Temperature
 
-Interactive component that displays current temperatures in New England state capitols. 
+Interactive component that displays current temperatures in New England state capitols.
+
+## Project Status
+
+Currently re-building with ES6 modules.
 
 ## Project Screen Shots
 
@@ -23,6 +27,7 @@ I wanted to build a component that pulls data from the NWS and displays the curr
 
 * Weather data from [National Weather Service](https://www.weather.gov).
 * Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
+* JavaScript guidance from [JSLint](http://jslint.com).
 * Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
 * Fonts from [Google Fonts](https://fonts.google.com).
 * Shields from [Shields](https://shields.io).
