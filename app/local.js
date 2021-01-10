@@ -1,9 +1,9 @@
 import {showFarenheit, hideFarenheit} from "./farenheit.js";
 import {showCelcius, hideCelcius} from "./celcius.js";
 import {showSlash, hideSlash} from "./slash.js";
-import {removeSelected, addSelected} from "./selected.js";
+import {updateSelected} from "./selected.js";
 
-//Function to show "SET!" alert. Hide it 2 seconds later.
+//Show "SET!" alert. Hide it 2 seconds later.
 function setTxtAlert() {
     "use strict";
 
@@ -15,7 +15,9 @@ function setTxtAlert() {
     }, 2000);
 }
 
-//Check local storage. If set, invoke matching function.
+//Check local storage.
+//If set to "x", invoke functions to display "x", hide "y".
+//If unset, invoke functions to display "x" and "y".
 function checkLocal() {
     "use strict";
 
@@ -25,20 +27,17 @@ function checkLocal() {
         showFarenheit();
         hideSlash();
         hideCelcius();
-        removeSelected();
-        addSelected("f");
+        updateSelected("f");
     } else if (units === "celsius") {
         hideFarenheit();
         hideSlash();
         showCelcius();
-        removeSelected();
-        addSelected("c");
+        updateSelected("c");
     } else {
         showFarenheit();
         showSlash();
         showCelcius();
-        removeSelected();
-        addSelected("b");
+        updateSelected("b");
     }
 }
 
@@ -49,9 +48,9 @@ function setLocal() {
     //Gather the footer element.
     const footer = document.querySelector("footer");
 
-    //Monitor footer. Whan a link is clicked...
-    //Set local storage. Check local storage. Checking shows/hides temps.
-    //Developing locally? - in Safari, "Disable local file restrictions".
+    //Monitor footer. When link clicked...
+    //Set local storage.
+    //Invoke checkLocal function to show/hide elements.
     footer.addEventListener("click", function (event) {
         if (event.target.id === "unit-f") {
             localStorage.setItem("units", "fahrenheit");
