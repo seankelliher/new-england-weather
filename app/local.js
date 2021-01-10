@@ -1,6 +1,4 @@
-import {showFarenheit, hideFarenheit} from "./farenheit.js";
-import {showCelcius, hideCelcius} from "./celcius.js";
-import {showSlash, hideSlash} from "./slash.js";
+import {showUnits, hideUnits} from "./units.js";
 import {updateSelected} from "./selected.js";
 
 //Show "SET!" alert. Hide it 2 seconds later.
@@ -24,19 +22,19 @@ function checkLocal() {
     const units = localStorage.getItem("units");
 
     if (units === "fahrenheit") {
-        showFarenheit();
-        hideSlash();
-        hideCelcius();
+        showUnits("faren");
+        hideUnits("slash");
+        hideUnits("celci");
         updateSelected("f");
     } else if (units === "celsius") {
-        hideFarenheit();
-        hideSlash();
-        showCelcius();
+        showUnits("celci");
+        hideUnits("slash");
+        hideUnits("faren");
         updateSelected("c");
     } else {
-        showFarenheit();
-        showSlash();
-        showCelcius();
+        showUnits("faren");
+        showUnits("slash");
+        showUnits("celci");
         updateSelected("b");
     }
 }
