@@ -1,25 +1,17 @@
-//Remove "selected" class.
-function removeSelected() {
+//Update "selected" element (in footer).
+function updateSelected(x) {
     "use strict";
 
-    //Gather all elements that contain the class "selected".
+    //Remove any "selected" class.
     const selects = document.querySelectorAll(".selected");
-
-    //Remove them.
     selects.forEach(function (select) {
         select.classList.remove("selected");
     });
-}
 
-//Add "selected" class.
-function addSelected(x) {
-    "use strict";
-
+    //Add "selected" class to link user clicked.
     const unit = "unit-" + x;
-
-    //Get the selected element. Add "selected" class.
     const selected = document.getElementById(unit);
     selected.classList.add("selected");
 }
 
-export {removeSelected, addSelected};
+export {updateSelected};
