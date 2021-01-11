@@ -1,17 +1,23 @@
 import {createElements} from "./elements.js";
 
-async function fetchWeather(station) {
-    const apiUrl = `https://api.weather.gov/stations/${station}/observations?limit=1`;
-    const response =  await fetch(apiUrl);
-    const json = await response.json();
+function fetchWeather(station) {
+    const apiBase = `https://api.weather.gov/stations/${station}/`;
+    const apiLatest = "observations/latest?require_qc=false";
+    const apiUrl = `${apiBase}${apiLatest}`;
 
-    const elevation = json.features[0].properties.elevation.value;
-    const elevationUnit = json.features[0].properties.elevation.unitCode;
-    const temperature = json.features[0].properties.temperature.value;
-    //const temperatureUnit = json.features[0].properties.temperature.unitCode;
-    const condition = json.features[0].properties.textDescription;
+    fetch(apiUrl).then(function (response) {
+        return response.json();
+    }).then(function (data) {
+        //const elevation = data.properties.elevation.value;
+        //const elevationUnit = data.properties.elevation.unitCode;
+        const temperature = data.properties.temperature.value;
+        //const temperatureUnit = data.properties.temperature.unitCode;
+        //const condition = data.properties.textDescription;
 
-    createElements(station, temperature);
+        createElements(station, temperature);
+    }).catch(function () {
+        createElements(station, "error");
+    });
 }
 
-export{fetchWeather};
+export {fetchWeather};
