@@ -96,7 +96,7 @@ footer {
 /*Class for links in footer.*/
 .units {
     cursor: pointer;
-    color: #595959;
+    color: #757575;
     margin: 0 2.5%;
 }
 
@@ -112,7 +112,7 @@ footer {
 
 /*In footer. Pops up when users specifies units.*/
 #set-txt {
-    color: #F25252;
+    color: #F25252; /*orange*/
     display: none;
 }
 
@@ -123,17 +123,23 @@ p {
     font-weight: 400;
 }
 
+.details {
+    line-height: 1;
+    text-transform: lowercase;
+}
+
 h1 {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
     font-weight: 700;
 }
 
+/*City names like "Augusta"*/
 h2 {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
     font-weight: 700;
-    color: #020659;
+    color: #020659; /*dark purple*/
 }
 
 @media all and (min-width: 300px) {
@@ -164,11 +170,12 @@ h2 {
     }
 }
 
+/*State names like "Maine"*/
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: .8125em; /*13 pixels*/
     line-height: 1.2;
     font-weight: 700;
-    color: #F25252;
+    color: #F25252; /*orange*/
     text-transform: uppercase;
 }
