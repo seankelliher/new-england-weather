@@ -43,7 +43,7 @@ function checkLocal() {
 function setLocal() {
     "use strict";
 
-    //Gather the footer element.
+    //Get the footer element.
     const footer = document.querySelector("footer");
 
     //Monitor footer. When link clicked...
