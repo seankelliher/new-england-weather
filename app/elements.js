@@ -66,7 +66,7 @@ function completeElements(station, temperature, condition) {
         ptag2.textContent = "";
     } else {
         const faren = (temperature * 1.8 + 32); //Convert temperature
-        const farenFixed = faren.toFixed(1); //to Farenheit.
+        const farenFixed = faren.toFixed(1); //to Fahrenheit.
         span1.textContent = `${farenFixed}\u00B0F`;
         span3.textContent = `${temperature}\u00B0C`;
         ptag2.textContent = `${condition}`;
