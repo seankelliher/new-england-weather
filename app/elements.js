@@ -1,4 +1,4 @@
-function createElements(station, temperature, condition) {
+function createElements(station) {
     "use strict";
 
     //Get main element.
@@ -8,11 +8,9 @@ function createElements(station, temperature, condition) {
     const section = document.createElement("section");
     const h3tag = document.createElement("h3");
     const h2tag = document.createElement("h2");
-    const ptag1 = document.createElement("p");
-    const ptag2 = document.createElement("p");
-    const span1 = document.createElement("span");
-    const span2 = document.createElement("span");
-    const span3 = document.createElement("span");
+
+    //Assign id to section.
+    section.id = station.toLowerCase();
 
     //Assign content to h2 and h3.
     switch (station) {
@@ -25,7 +23,7 @@ function createElements(station, temperature, condition) {
         h2tag.textContent = "Boston";
         break;
     case "KCON":
-        h3tag.textContent = "New Hampshite";
+        h3tag.textContent = "New Hampshire";
         h2tag.textContent = "Concord";
         break;
     case "KHFD":
@@ -45,6 +43,22 @@ function createElements(station, temperature, condition) {
         h2tag.textContent = "Error";
     }
 
+    //Append elements.
+    section.appendChild(h3tag);
+    section.appendChild(h2tag);
+    main.appendChild(section);
+}
+
+function completeElements(station, temperature, condition) {
+    "use strict";
+
+    //Create needed elements.
+    const ptag1 = document.createElement("p");
+    const ptag2 = document.createElement("p");
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
+    const span3 = document.createElement("span");
+
     //Assign content depending on API fetch result.
     if (temperature === "error") {
         span1.textContent = "error";
@@ -55,10 +69,10 @@ function createElements(station, temperature, condition) {
         const farenFixed = faren.toFixed(1); //to Farenheit.
         span1.textContent = `${farenFixed}\u00B0F`;
         span3.textContent = `${temperature}\u00B0C`;
-        ptag2.textContent = condition;
+        ptag2.textContent = `${condition}`;
     }
 
-    //Assign content, all cases.
+    //Assign content, used in all results.
     span2.textContent = " / ";
 
     //Assign needed class names.
@@ -67,17 +81,18 @@ function createElements(station, temperature, condition) {
     span3.className = "celci";
     ptag2.className = "details"; //for condition like "cloudy".
 
-    //Append tags.
+    //Append elements.
     ptag1.appendChild(span1);
     ptag1.appendChild(span2);
     ptag1.appendChild(span3);
 
-    //Append elements.
-    section.appendChild(h3tag);
-    section.appendChild(h2tag);
+    //Get section for station being received.
+    const sectionId = station.toLowerCase();
+    const section = document.getElementById(sectionId);
+
+    //Append more elements.
     section.appendChild(ptag1);
     section.appendChild(ptag2);
-    main.appendChild(section);
 }
 
-export {createElements};
+export {createElements, completeElements};
