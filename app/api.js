@@ -1,4 +1,4 @@
-import {createElements} from "./elements.js";
+import {completeElements} from "./elements.js";
 
 function fetchWeather(station) {
     const apiBase = `https://api.weather.gov/stations/${station}/`;
@@ -10,9 +10,9 @@ function fetchWeather(station) {
     }).then(function (data) {
         const temperature = data.properties.temperature.value;
         const condition = data.properties.textDescription;
-        createElements(station, temperature, condition);
+        completeElements(station, temperature, condition);
     }).catch(function () {
-        createElements(station, "error");
+        completeElements(station, "error");
     });
 }
 
