@@ -3,10 +3,6 @@
 
 Interactive component that displays current temperatures in New England state capitols.
 
-## Project Status
-
-Currently re-building with ES6 modules.
-
 ## Project Screen Shots
 
 ![screen shot of project](/screenshots/current-temperature-screenshot1.jpg)
@@ -15,13 +11,13 @@ Currently re-building with ES6 modules.
 
 ## Installation and Setup Instructions
 
-This is a static component. All you need is a web browser connected to the internet.
+This is a static component. All you need is a web browser. However, component uses ES6 modules. Developing locally may require disabling your browser's local file restrictions.
 
 ## Reflection
 
-For geography, New England is a region in the Northeast United States. It is comprised of the states Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont. The National Weather Service (NWS) is our federal agency for weather. 
+My goal was to built a component that pulls data from the National Weather Service (NWS) and displays current temperatures in New England state capitols. I wanted to offer both Fahrenheit and Celsius units, but also let users choose a single unit (if desired) and display that unit on return visits. Vanilla JavaScript worked fine for all this: modifying the display property; using local storage; fetching data using Promises.
 
-I wanted to build a component that pulls data from the NWS and displays the current temperature in each New England state capitol. Temperatures are displayed in both Fahrenheit and Celsius by default. Users can choose a preferred unit. If they do so, only that unit will display on this and future visits. The future visits part is done with local storage. Challenges for the project were deciphering the NWS's API and trying to make a list of temperatures look visually appealing.
+Challenges for the project were deciphering the NWS's API and ensuring results displayed in the same order each time data was fetched. Remember that Promises are asynchronous. Results may not be returned in the same order they were requested. To overcome this, I built the elements for the page first, and then assigned each state capitol's NWS data to its place on the page.
 
 ## Acknowledgments
 
