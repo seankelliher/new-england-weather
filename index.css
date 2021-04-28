@@ -139,7 +139,6 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
     font-weight: 700;
-    color: #020659; /*dark purple*/
 }
 
 @media all and (min-width: 300px) {
@@ -176,6 +175,6 @@ h3 {
     font-size: .8125em; /*13 pixels*/
     line-height: 1.2;
     font-weight: 700;
-    color: #F25252; /*orange*/
+    color: #006DB3; /*light blue 600 dark*/
     text-transform: uppercase;
 }
