@@ -16,15 +16,15 @@ body {
 
 header {
     width: 90%;
-    margin: 0;
-    padding: .5em 5%;
+    margin: 1em 0 0 0;
+    padding: .5em 5% 0 5%;
     flex: initial; /*flex: 0 1 auto*/
 }
 
 main {
     width: 90%;
     margin: 0;
-    padding: 1em 5%;
+    padding: 0 5% 1em 5%;
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -34,9 +34,8 @@ main {
 
 section {
     flex: initial; /*flex: 0 1 auto*/
-    border: 1px solid #D9D7D7;
+    border: 1px solid #EEE; /*grey 200*/
     border-radius: 4px;
-    background: #FAFAFA;
 }
 
 @media all and (min-width: 300px) {
@@ -56,7 +55,7 @@ section {
 }
 
 .slash {
-    color: #D9D7D7;
+    color: #EEE; /*grey 200*/
 }
 
 footer {
@@ -64,14 +63,14 @@ footer {
     margin: 0 auto 1em auto;
     padding: .5em 5%;
     flex: initial; /*flex: 0 1 auto*/
-    border: 1px solid #D9D7D7;
+    border: 1px solid #EEE; /*grey 200*/
     border-radius: 4px;
 }
 
 /*Class for links in footer.*/
 .units {
     cursor: pointer;
-    color: #757575;
+    color: #757575; /*grey 600*/
     margin: 0 2.5%;
 }
 
@@ -87,7 +86,7 @@ footer {
 
 /*In footer. Pops up when users specifies units.*/
 #set-txt {
-    color: #F25252; /*orange*/
+    color: #B4004E; /*pink 400 dark*/
     display: none;
 }
 
