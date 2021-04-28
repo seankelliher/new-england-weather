@@ -24,7 +24,7 @@ header {
 main {
     width: 90%;
     margin: 0;
-    padding: 0 5% 1em 5%;
+    padding: 0 5%;
     flex: initial; /*flex: 0 1 auto*/
     display: flex;
     flex-flow: row wrap;
@@ -59,12 +59,10 @@ section {
 }
 
 footer {
-    width: 80%;
-    margin: 0 auto 1em auto;
-    padding: .5em 5%;
+    width: 90%;
+    margin: 0;
+    padding: 0 5% .5em 5%;
     flex: initial; /*flex: 0 1 auto*/
-    border: 1px solid #EEE; /*grey 200*/
-    border-radius: 4px;
 }
 
 /*Class for links in footer.*/
