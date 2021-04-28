@@ -19,31 +19,6 @@ header {
     margin: 0;
     padding: .5em 5%;
     flex: initial; /*flex: 0 1 auto*/
-    position: relative;
-    border-bottom: 1px solid #D9D7D7;
-    background: #FAFAFA;
-}
-
-header::before {
-    content:  "";
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    width: 1200px;
-    left: 100%;
-    border-bottom: 1px solid #D9D7D7;
-    background: #FAFAFA;
-}
-
-header::after {
-    content:  "";
-    position: absolute;
-    top: 0;
-    bottom: -1px;
-    width: 1200px;
-    right: 100%;
-    border-bottom: 1px solid #D9D7D7;
-    background: #FAFAFA;
 }
 
 main {
