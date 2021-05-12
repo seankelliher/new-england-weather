@@ -56,10 +56,6 @@ section {
     }
 }
 
-.slash {
-    color: #EEE; /*grey 200*/
-}
-
 footer {
     width: 90%;
     margin: 0 5% .5em 5%;
@@ -70,7 +66,6 @@ footer {
 /*Class for links in footer.*/
 .units {
     cursor: pointer;
-    color: #757575; /*grey 600*/
     margin: 0 2.5%;
 }
 
