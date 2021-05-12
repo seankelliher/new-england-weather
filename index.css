@@ -95,6 +95,7 @@ p {
 .details {
     line-height: 1;
     text-transform: lowercase;
+    color: #C63F17; /*deep orange 400 dark*/
 }
 
 h1 {
