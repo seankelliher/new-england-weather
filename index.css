@@ -18,8 +18,8 @@ body {
 
 header {
     width: 90%;
-    margin: 1em 0 0 0;
-    padding: .5em 5% 0 5%;
+    margin: 1.5em 5% 0 5%;
+    padding: 0;
     flex: initial; /*flex: 0 1 auto*/
 }
 
@@ -62,8 +62,8 @@ section {
 
 footer {
     width: 90%;
-    margin: 0;
-    padding: 0 5% .5em 5%;
+    margin: 0 5% .5em 5%;
+    padding: 0;
     flex: initial; /*flex: 0 1 auto*/
 }
 
