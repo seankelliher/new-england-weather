@@ -74,7 +74,7 @@ footer {
 
 /*In footer. Pops up when users specifies units.*/
 #set-txt {
-    color: #C63F17; /*deep orange 400 dark*/
+    color: #C41C00; /*deep orange 500 dark*/
     display: none;
 }
 
@@ -88,7 +88,8 @@ p {
 .details {
     line-height: 1;
     text-transform: lowercase;
-    color: #C63F17; /*deep orange 400 dark*/
+    /*color: #C63F17; deep orange 400 dark*/
+    color: #C41C00; /*deep orange 500 dark*/
 }
 
 h1 {
@@ -138,6 +139,7 @@ h3 {
     font-size: .8125em; /*13 pixels*/
     line-height: 1.2;
     font-weight: 700;
-    color: #006DB3; /*light blue 600 dark*/
+    /*color: #006DB3; light blue 600 dark*/
+    color: #1976D2; /*blue 700*/
     text-transform: uppercase;
 }
