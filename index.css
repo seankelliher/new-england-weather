@@ -111,6 +111,15 @@ h2 {
     font-weight: 700;
 }
 
+/*State names like "Maine"*/
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1976D2; /*blue 700*/
+    text-transform: uppercase;
+}
+
 @media all and (min-width: 300px) {
     p {
         font-size: .875em;
@@ -122,6 +131,10 @@ h2 {
 
     h2 {
         font-size: 1em;
+    }
+
+    h3 {
+        font-size: .9375em;
     }
 }
 
@@ -137,6 +150,10 @@ h2 {
     h2 {
         font-size: 1.2em;
     }
+    
+    h3 {
+        font-size: 1em;
+    }
 }
 
 @media all and (min-width: 600px) {
@@ -151,14 +168,8 @@ h2 {
     h2 {
         font-size: 1.4em;
     }
-}
 
-/*State names like "Maine"*/
-h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: .8125em; /*13 pixels*/
-    line-height: 1.2;
-    font-weight: 700;
-    color: #1976D2; /*blue 700*/
-    text-transform: uppercase;
+    h3 {
+        font-size: 1.2em;
+    }
 }
