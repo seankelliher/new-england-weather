@@ -25,5 +25,4 @@ Challenges for the project were deciphering the NWS's API and ensuring results d
 * Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
 * JavaScript guidance from [JSLint](http://jslint.com).
 * Design guidance from Google's [Material Design](https://material.io/design) and [Adobe Color](https://color.adobe.com/trends).
-* Fonts from [Google Fonts](https://fonts.google.com).
 * Shields from [Shields](https://shields.io).
