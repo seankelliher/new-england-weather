@@ -6,6 +6,10 @@ function fetchWeather(station) {
     const apiUrl = `${apiBase}${apiLatest}`;
 
     fetch(apiUrl).then(function (response) {
+        if (!response.ok) {
+            window.console.log(`HTTP error! status: ${response.status}`);
+            throw completeElements();
+        }
         return response.json();
     }).then(function (data) {
         const temperature = data.properties.temperature.value;
