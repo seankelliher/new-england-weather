@@ -29,7 +29,7 @@ main {
 
 section {
     flex: initial; /*flex: 0 1 auto*/
-    background:#B3E5FC; /*light blue 100*/
+    background: #FAFAFA; /*grey 50*/
     border-radius: 4px;
 }
 
@@ -93,7 +93,7 @@ p {
 }
 
 .details {
-    line-height: 1;
+    line-height: 1.2;
     text-transform: lowercase;
     color: #8D6E63; /*brown 400*/
 }
