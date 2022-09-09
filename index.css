@@ -5,87 +5,87 @@
     padding: 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /*main axis*/
-    align-items: flex-start; /*cross axis*/
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
 }
 
 header {
     width: 90%;
-    margin: 1.5em 5% 0 5%;
+    margin: 1.5em 5% 0; /* longhand is 1.5em 5% 0 5% */
     padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
 main {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /*main axis*/
-    align-items: stretch; /*cross axis*/
+    justify-content: space-between; /* main axis */
+    align-items: stretch; /* cross axis */
 }
 
 section {
-    flex: initial; /*flex: 0 1 auto*/
-    background: #FAFAFA; /*grey 50*/
+    flex: initial; /* flex: 0 1 auto */
+    background: #fafafa; /* grey 50 */
     border-radius: 4px;
 }
 
 @media all and (min-width: 300px) {
     section {
         width: 80%;
-        margin-top: .5em;
-        margin-bottom: .5em;
-        padding: .5em 10%;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        padding: 0.5em 10%;
     }
 }
 
 @media all and (min-width: 430px) {
     section {
         width: 36%;
-        padding: .5em 6%;
+        padding: 0.5em 6%;
     }
 }
 
 @media all and (min-width: 600px) {
     section {
         width: 27%;
-        padding: .5em 2.5%;
+        padding: 0.5em 2.5%;
     }
 }
 
 footer {
     width: 90%;
-    margin: 0 5% .5em 5%;
+    margin: 0 5% 0.5em; /* longhand is 0 5% 0.5em 5% */
     padding: 0;
-    flex: initial; /*flex: 0 1 auto*/
+    flex: initial; /* flex: 0 1 auto */
 }
 
-/*Class for links in footer.*/
+/* Class for links in footer. */
 .units {
     cursor: pointer;
     margin: 0 2.5%;
 }
 
-/*Class for links in footer hover state.*/
+/* Class for links in footer hover state. */
 .units:hover {
     text-decoration: underline;
 }
 
-/*Selected class*/
+/* Selected class */
 .selected {
     text-decoration: underline;
 }
 
-/*In footer. Pops up when users specifies units.*/
+/* In footer. Pops up when users specifies units. */
 #set-txt {
-    color: #C41C00; /*deep orange 500 dark*/
+    color: #c41c00; /* deep orange 500 dark */
     display: none;
 }
 
-/*Fonts*/
+/* Fonts */
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.8;
@@ -95,7 +95,7 @@ p {
 .details {
     line-height: 1.2;
     text-transform: lowercase;
-    color: #8D6E63; /*brown 400*/
+    color: #8d6e63; /* brown 400 */
 }
 
 h1 {
@@ -104,25 +104,25 @@ h1 {
     font-weight: 700;
 }
 
-/*City names like "Augusta"*/
+/* City names like "Augusta" */
 h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
     font-weight: 700;
 }
 
-/*State names like "Maine"*/
+/* State names like "Maine" */
 h3 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
     font-weight: 700;
-    color: #1976D2; /*blue 700*/
+    color: #1976d2; /* blue 700 */
     text-transform: uppercase;
 }
 
 @media all and (min-width: 300px) {
     p {
-        font-size: .875em;
+        font-size: 0.875em;
     }
 
     h1 {
@@ -134,13 +134,13 @@ h3 {
     }
 
     h3 {
-        font-size: .9375em;
+        font-size: 0.9375em;
     }
 }
 
 @media all and (min-width: 400px) {
     p {
-        font-size: .9375em;
+        font-size: 0.9375em;
     }
 
     h1 {
@@ -150,7 +150,7 @@ h3 {
     h2 {
         font-size: 1.2em;
     }
-    
+
     h3 {
         font-size: 1em;
     }
