@@ -61,7 +61,7 @@ function completeElements(station, temperature, condition) {
 
     //Assign content depending on API fetch result.
     if (temperature === "error") {
-        span1.textContent = "error";
+        span1.textContent = "not available";
         span3.textContent = "not available";
         ptag2.textContent = "";
     } else {
