@@ -43,13 +43,13 @@ function checkLocal() {
 function setLocal() {
     "use strict";
 
-    //Get the footer element.
-    const footer = document.querySelector("footer");
+    //Get the nav element.
+    const nav = document.querySelector("nav");
 
-    //Monitor footer. When link clicked...
+    //Monitor nav. When link clicked...
     //Set local storage.
     //Invoke checkLocal function to show/hide elements.
-    footer.addEventListener("click", function (event) {
+    nav.addEventListener("click", function (event) {
         if (event.target.id === "unit-f") {
             localStorage.setItem("units", "fahrenheit");
             checkLocal();
