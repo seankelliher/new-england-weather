@@ -1,4 +1,4 @@
-//Update "selected" element (in footer).
+//Update "selected" element (in nav).
 function updateSelected(x) {
     "use strict";
 
