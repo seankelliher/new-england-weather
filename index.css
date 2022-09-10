@@ -19,9 +19,9 @@ header {
 
 nav {
     width: 80%;
-    margin: 0 5%; /* longhand is 1.5em 5% 0 5% */
+    margin: 0 5%;
     padding: 0 5%;
-    background: #dfedf2;  /* lighter slate blue */
+    background: #dfedf2; /* lighter slate blue */
     flex: initial; /* flex: 0 1 auto */
 }
 
@@ -38,7 +38,6 @@ main {
 
 section {
     flex: initial; /* flex: 0 1 auto */
-    background: #dfedf2;  /* lighter slate blue */
     background: #fafafa; /* grey 50 */
     border: 1px solid #dfedf2;  /* lighter slate blue */
     border-radius: 4px;
@@ -67,13 +66,13 @@ section {
     }
 }
 
-/* Class for links in footer. */
+/* Class for links in nav. */
 .units {
     cursor: pointer;
     margin: 0 2.5%;
 }
 
-/* Class for links in footer hover state. */
+/* Class for links in nav hover state. */
 .units:hover {
     text-decoration: underline;
 }
@@ -83,7 +82,7 @@ section {
     text-decoration: underline;
 }
 
-/* In footer. Pops up when users specifies units. */
+/* In nav. Pops up when users specifies units. */
 #set-txt {
     color: #f23005; /* orange */
     display: none;
