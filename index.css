@@ -111,20 +111,29 @@ h1 {
     color: #fff;
 }
 
-/* City names like "Augusta" */
-h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.2;
-    font-weight: 700;
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    text-decoration: none;
 }
 
 /* State names like "Maine" */
-h3 {
+h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.2;
     font-weight: 700;
     color: #122459; /* dark blue */
     text-transform: uppercase;
+}
+
+/* City names like "Augusta" */
+h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
 @media all and (min-width: 300px) {
@@ -137,11 +146,11 @@ h3 {
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 0.9375em;
     }
 
     h3 {
-        font-size: 0.9375em;
+        font-size: 1em;
     }
 }
 
@@ -155,11 +164,11 @@ h3 {
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     h3 {
-        font-size: 1em;
+        font-size: 1.2em;
     }
 }
 
@@ -172,7 +181,7 @@ h3 {
         font-size: 1.6em;
     }
 
-    h2 {
+    h3 {
         font-size: 1.4em;
     }
 }
