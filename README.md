@@ -1,7 +1,7 @@
 [![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/new-england-weather?style=flat-square)](/LICENSE.txt)
 ## New England Weather
 
-Interactive component that displays current weather in New England state capitols.
+Interactive component that displays current weather in New England state capitols. [View working component](https://seankelliher.github.io/new-england-weather/).
 
 ## Project Screen Shots
 
