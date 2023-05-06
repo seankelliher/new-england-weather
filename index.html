@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
 
-        <title>Sean Kelliher - Current Temperature</title>
+        <title>Sean Kelliher - New England Weather</title>
 
         <meta name="description" content="Add description for production model">
         <meta name="robots" content="noindex">
@@ -19,13 +19,25 @@
 
     <div id="container">
 
+        <div class="date-time">
+            <div class="date">
+                <!-- Current date goes here -->
+                <p id="date-space" class="lite-txt"></p>
+            </div>
+            <div class="time">
+                <!-- Currrent time goes here -->
+                <p id="time-space" class="lite-txt"></p>
+            </div>
+        </div>
+
         <header>
-            <h1><a href="index.html">New England Weather</a></h1>
+            <h1 class="emphasis">New England Weather</h1>
         </header>
 
-        <nav>
-            <p>Set units to:<span class="units" id="unit-f" tabindex="0">&deg;F</span><span class="units" id="unit-c" tabindex="0">&deg;C</span> <span class="units" id="unit-b" tabindex="0">BOTH</span><span id="set-txt">SET!</span></p>
-        </nav>
+        <div class="units">
+            <button id="metric-btn" class="lite-txt">Metric</button>
+            <button id="imperial-btn" class="lite-txt">Imperial</button>
+        </div>
 
         <main>
 
