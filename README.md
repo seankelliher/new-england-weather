@@ -17,9 +17,9 @@ This is a static component. All you need is a web browser. However, component us
 
 ## Reflection
 
-My goal was to built a component that pulls data from the National Weather Service (NWS) and displays current weather in New England state capitols. I wanted to offer both Fahrenheit and Celsius units, but also let users choose a single unit (if desired) and display that unit on return visits. Vanilla JavaScript worked fine for all this: modifying the display property; using local storage; fetching data using Promises.
+My goal was to build an app that pulls data from the National Weather Service (NWS) and displays current weather in the six New England state capitols. I wanted to offer users both Imperial (Fahrenheit, miles) and Metric (Celsius, kilometers) units and have the app remember a user's choice for return visits. The NWS uses Metric units. I did the miles/km and F/C conversions in the app. The math isn't that complex. I also used the browser's local storage to remember a user's preferred unit.
 
-Challenges for the project were deciphering the NWS's API and ensuring results displayed in the same order each time data was fetched. Remember that Promises are asynchronous. Results may not be returned in the same order they were requested. To overcome this, I built the elements for the page first, and then assigned each state capitol's NWS data to its place on the page.
+Deciphering the NWS's API took some time. Also, ensuring the six cities displayed in the same order each time data was fetched required some planning. Since the six separate calls to the NWS use Promises and Promises are asynchronous, the order in which results were returned varied. To overcome this, I built the elements for the page first, and then matched the data to the elements.
 
 ## Acknowledgments
 
