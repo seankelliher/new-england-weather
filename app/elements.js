@@ -1,3 +1,10 @@
+import {
+    showImperial,
+    showMetric,
+    hideImperial,
+    hideMetric
+} from "./choose-units.js";
+
 function createElements(station) {
     "use strict";
 
@@ -6,93 +13,191 @@ function createElements(station) {
 
     // Create needed elements.
     const section = document.createElement("section");
-    const h2tag = document.createElement("h2");
-    const h3tag = document.createElement("h3");
+    const loc = document.createElement("p");
+    loc.classList.add("emphasis");
 
     // Assign id to section.
     section.id = station.toLowerCase();
 
-    // Assign content to h2 and h3.
+    // Assign content to location.
     switch (station) {
     case "KAUG":
-        h2tag.textContent = "Maine";
-        h3tag.textContent = "Augusta";
+        loc.textContent = "Augusta, Maine";
         break;
     case "KBOS":
-        h2tag.textContent = "Massachusetts";
-        h3tag.textContent = "Boston";
+        loc.textContent = "Boston, Massachusetts";
         break;
     case "KCON":
-        h2tag.textContent = "New Hampshire";
-        h3tag.textContent = "Concord";
+        loc.textContent = "Concord, New Hampshire";
         break;
     case "KHFD":
-        h2tag.textContent = "Connecticut";
-        h3tag.textContent = "Hartford";
+        loc.textContent = "Hartford, Connecticut";
         break;
     case "KPVD":
-        h2tag.textContent = "Rhode Island";
-        h3tag.textContent = "Providence";
+        loc.textContent = "Providence, Rhode Island";
         break;
     case "KMPV":
-        h2tag.textContent = "Vermont";
-        h3tag.textContent = "Montpelier";
+        loc.textContent = "Montpelier, Vermont";
         break;
     default:
-        h2tag.textContent = "Error";
-        h3tag.textContent = "Error";
+        loc.textContent = "An error occured.";
     }
 
     // Append elements.
-    section.appendChild(h2tag);
-    section.appendChild(h3tag);
+    section.appendChild(loc);
     main.appendChild(section);
 }
 
-function completeElements(station, temperature, condition) {
+function completeElements (
+    station,
+    temperature,
+    condition,
+    windSpeed,
+    windDirectection,
+    dewpoint,
+    relativeHumidity) {
     "use strict";
 
-    // Create needed elements.
-    const ptag1 = document.createElement("p");
-    const ptag2 = document.createElement("p");
-    const span1 = document.createElement("span");
-    const span2 = document.createElement("span");
-    const span3 = document.createElement("span");
+    // TEMP - create elements.
+    const temp = document.createElement("p");
+    const tempC = document.createElement("span");
+    const tempF = document.createElement("span");
 
-    // Assign content depending on API fetch result.
-    if (temperature === "error") {
-        span1.textContent = "not available";
-        span3.textContent = "not available";
-        ptag2.textContent = "";
+    // TEMP - add classes.
+    tempC.classList.add("metric");
+    tempF.classList.add("imperial");
+
+    // TEMP - convert to Fahrenheit.
+    const tempConvertToF = (Math.round(temperature * 1.8) + 32);
+
+    // TEMP - append content.
+    if (temperature === "") {
+        tempC.textContent = "Temperature is unavailable.";
+        tempF.textContent = "Temperature is unavailable.";
     } else {
-        const faren = (temperature * 1.8 + 32); // Convert temperature
-        const farenFixed = faren.toFixed(1); // to Fahrenheit.
-        span1.textContent = `${farenFixed}\u00B0F`;
-        span3.textContent = `${temperature}\u00B0C`;
-        ptag2.textContent = `${condition}`;
+        tempC.textContent = `${temperature}°C `;
+        tempF.textContent = `${tempConvertToF}° F`;
     }
 
-    // Assign content, used in all results.
-    span2.textContent = " / ";
+    // TEMP - append elements.
+    temp.appendChild(tempC);
+    temp.appendChild(tempF);
 
-    // Assign needed class names.
-    span1.className = "faren";
-    span2.className = "slash";
-    span3.className = "celci";
-    ptag2.className = "details"; // for condition like "cloudy".
+    // CONDITION - create element.
+    const cond = document.createElement("p");
 
-    // Append elements.
-    ptag1.appendChild(span1);
-    ptag1.appendChild(span2);
-    ptag1.appendChild(span3);
+    // CONDITION - append content.
+    if (condition === "") {
+        cond.textContent = "Current conditions are unavailable.";
+    } else {
+        cond.textContent = `Current conditions are ${condition}.`;
+    }
+
+    // WIND - create elements.
+    const wind = document.createElement("p");
+    const windSpeedKm = document.createElement("span");
+    const windSpeedMi = document.createElement("span");
+    const windDirect = document.createElement("span");
+
+    // WIND - add classes.
+    windSpeedKm.classList.add("metric");
+    windSpeedMi.classList.add("imperial");
+
+    // WINDSPEED - tidy windSpeed.
+    let wsKm;
+    let wsMi;
+    if (windSpeed < 1 || windSpeed === null) {
+        wsKm = "Winds are calm";
+        wsMi = "Winds are calm";
+    } else if (windSpeed === "") {
+        wsKm = "Winds are unavailable.";
+        wsMi = "Winds are unavailable.";
+    } else {
+        const roundKm = Math.round(windSpeed);
+        const roundMi = Math.round(windSpeed * 0.621371); // 1km = 0.621371 mi.
+        wsKm = `Winds are ${roundKm} km/h`;
+        wsMi = `Winds are ${roundMi} mp/h`;
+    }
+
+    // WIND DIRECTION - tidy windDirection.
+    let wd;
+    if (windDirectection <= 90) {
+        wd = " from the Northeast.";
+    } else if (windDirectection > 90 && windDirectection <= 180) {
+        wd = " from the Southeast.";
+    } else if (windDirectection > 180 && windDirectection <= 270) {
+        wd = " from the Southwest.";
+    } else if (windDirectection > 270 && windDirectection <= 360) {
+        wd = " from the Northwest.";
+    } else if (windDirectection === null) {
+        wd = "with no direction.";
+    } else {
+        wd = "wind direction unavailable.";
+    }
+
+    // WIND - append content, elements.
+    windSpeedKm.textContent = `${wsKm}`;
+    windSpeedMi.textContent = `${wsMi}`;
+    windDirect.textContent = wd;
+    wind.appendChild(windSpeedKm);
+    wind.appendChild(windSpeedMi);
+    wind.appendChild(windDirect);
+
+    // DEWPOINT & HUMIDITY  - create elements.
+    const dewHum = document.createElement("p");
+    const dewC = document.createElement("span");
+    const dewF = document.createElement("span");
+    const humid = document.createElement("span");
+
+    // DEWPOINT & HUMIDITY - add classes.
+    dewC.classList.add("metric");
+    dewF.classList.add("imperial");
+
+    // DEWPOINT - convert to Fahrenheit.
+    const dewConvertToF = (Math.round(dewpoint * 1.8) + 32);
+
+    // DEWPOINT - append content.
+    if (dewpoint === "") {
+        dewC.textContent = "Dewpoint is unavailable.";
+        dewF.textContent = "Dewpoint is unavailable.";
+    } else{
+        dewC.textContent = `Dewpoint is ${dewpoint}° C.`;
+        dewF.textContent = `Dewpoint is ${dewConvertToF}° F.`;
+    }
+
+    // DEWPOINT - append elements.
+    dewHum.appendChild(dewC);
+    dewHum.appendChild(dewF);
+    dewHum.appendChild(humid);
+
+    // HUMIDITY - append content, elements.
+    const rh = Math.round(relativeHumidity);
+    if (relativeHumidity === "") {
+        humid.textContent = "Humidity is unavailable.";
+    } else {
+        humid.textContent = ` Humidity is ${rh}%.`;
+    }
 
     // Get section for station being received.
     const sectionId = station.toLowerCase();
     const section = document.getElementById(sectionId);
+    section.appendChild(temp);
+    section.appendChild(cond);
+    section.appendChild(wind);
+    section.appendChild(dewHum);
 
-    // Append more elements.
-    section.appendChild(ptag1);
-    section.appendChild(ptag2);
+    // Check localStorage to see if preferred unit is set.
+    const preferUnit = localStorage.getItem("newEnglandWeather");
+
+    // Show preferred unit, hide other one.
+    // If nothing is set, use metric.
+    if (preferUnit === "imperial") {
+        hideMetric();
+        showImperial();
+    } else if (preferUnit === null || preferUnit == "metric") {
+        hideImperial();
+        showMetric();
+    }
 }
 
 export {createElements, completeElements};
