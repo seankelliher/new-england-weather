@@ -1,6 +1,10 @@
+body {
+    margin-top: 0;
+}
+
 #container {
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 0;
     display: flex;
@@ -9,26 +13,138 @@
     align-items: flex-start; /* cross axis */
 }
 
-header {
-    width: 80%;
-    margin: 1.5em 5% 0; /* longhand is 1.5em 5% 0 5% */
-    padding: 0 5%;
-    background: #122459; /* dark blue */
-    flex: initial; /* flex: 0 1 auto */
-}
-
-nav {
-    width: 80%;
-    margin: 0 5%;
-    padding: 0 5%;
-    background: #dfedf2; /* lighter slate blue */
-    flex: initial; /* flex: 0 1 auto */
-}
-
-main {
+.date-time {
     width: 90%;
     margin: 0;
     padding: 0 5%;
+    background: #122459; /* dark blue */
+    flex: initial; /* flex: 0 1 auto */
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
+}
+
+.date-time::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    left: 100%;
+    background: #122459; /* dark blue */
+}
+
+.date-time::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    right: 100%;
+    background: #122459; /* dark blue */
+}
+
+.date {
+    width: 65%;
+    margin: 0;
+    padding: 0;
+    flex: initial; /* flex: 0 1 auto */
+}
+
+.time {
+    width: 35%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    flex: initial; /* flex: 0 1 auto */
+}
+
+header {
+    width: 90%;
+    margin: 0;
+    padding: 0 5%;
+    background: #c9e7f2;  /* light sky blue */
+    flex: initial; /* flex: 0 1 auto */
+    position: relative;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    left: 100%;
+    background: #c9e7f2;  /* light sky blue */
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2000px;
+    right: 100%;
+    background: #c9e7f2;  /* light sky blue */
+}
+
+.units {
+    width: 90%;
+    margin: 1em 0;
+    padding: 0.5em 5%;
+    flex: initial; /* flex: 0 1 auto */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; /* main axis */
+    align-items: stretch; /* cross axis */
+}
+
+button {
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 2.5;
+    font-weight: 600;
+}
+
+@media (width >= 300px) {
+    button {
+        font-size: 0.875em; /* 14px */
+    }
+}
+
+@media (width >= 400px) {
+    button {
+        font-size: 0.9375em; /* 15px */
+    }
+}
+
+@media (width >= 500px) {
+    button {
+        font-size: 1em; /* 16px */
+    }
+}
+
+@media (width >= 600px) {
+    button {
+        font-size: 1.0625em; /* 17px */
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
@@ -38,150 +154,101 @@ main {
 
 section {
     flex: initial; /* flex: 0 1 auto */
-    background: #fafafa; /* grey 50 */
-    border: 1px solid #dfedf2;  /* lighter slate blue */
-    border-radius: 4px;
+    background: #c9e7f2;  /* light sky blue */
+    border-radius: 15px;
 }
 
-@media all and (min-width: 300px) {
+@media (width >= 300px) {
     section {
-        width: 80%;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-        padding: 0.5em 10%;
-    }
-}
-
-@media all and (min-width: 480px) {
-    section {
-        width: 38%;
+        width: 85%;
+        margin: 0 2.5% 1em; /* longhand is 0 2.5% 1em 2.5% */
         padding: 0.5em 5%;
     }
 }
 
-@media all and (min-width: 600px) {
+@media (width >= 400px) {
     section {
-        width: 27%;
-        padding: 0.5em 2.5%;
+        width: 80%;
+        margin: 0 5% 1em; /* longhand is 0 5% 1em 5% */
+        padding: 0.5em 5%;
     }
 }
 
-/* Class for links in nav. */
-.units {
-    cursor: pointer;
-    margin: 0 2.5%;
+@media (width >= 500px) {
+    section {
+        width: 75%;
+        margin: 0 7.5% 1em; /* longhand is 0 7.5% 1em 7.5% */
+        padding: 0.5em 5%;
+    }
 }
 
-/* Class for links in nav hover state. */
-.units:hover {
-    text-decoration: underline;
-}
-
-/* Selected class */
-.selected {
-    text-decoration: underline;
-}
-
-/* In nav. Pops up when users specifies units. */
-#set-txt {
-    color: #f23005; /* orange */
-    display: none;
+@media (width >= 600px) {
+    section {
+        width: 70%;
+        margin: 0 10% 1em; /* longhand is 0 10% 1em 10% */
+        padding: 0.5em 5%;
+    }
 }
 
 /* Fonts */
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    line-height: 1.5;
     font-weight: 400;
-}
-
-.details {
-    line-height: 1.2;
-    color: #0420bf; /* bright violet */
-}
-
-nav p {
-    line-height: 1.2;
 }
 
 h1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 700;
+}
+
+.lite-txt {
     color: #fff;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
-h1 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-h1 a:hover {
-    text-decoration: none;
-}
-
-/* State names like "Maine" */
-h2 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.2;
-    font-weight: 700;
+.emphasis {
     color: #122459; /* dark blue */
-    text-transform: uppercase;
+    font-weight: 500;
 }
 
-/* City names like "Augusta" */
-h3 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-@media all and (min-width: 300px) {
+@media (width >= 300px) {
     p {
-        font-size: 0.875em;
+        font-size: 0.875em; /* 14px */
     }
 
     h1 {
-        font-size: 1.2em;
-    }
-
-    h2 {
-        font-size: 0.9375em;
-    }
-
-    h3 {
-        font-size: 1em;
+        font-size: 1em; /* 16px */
     }
 }
 
-@media all and (min-width: 400px) {
+@media (width >= 400px) {
     p {
-        font-size: 0.9375em;
+        font-size: 0.9375em; /* 15px */
     }
 
     h1 {
-        font-size: 1.4em;
-    }
-
-    h2 {
-        font-size: 1em;
-    }
-
-    h3 {
-        font-size: 1.2em;
+        font-size: 1.0625em; /* 17px */
     }
 }
 
-@media all and (min-width: 600px) {
+@media (width >= 500px) {
     p {
-        font-size: 1em;
+        font-size: 1em; /* 16px */
     }
 
     h1 {
-        font-size: 1.6em;
+        font-size: 1.125em; /* 18 px */
+    }
+}
+
+@media (width >= 600px) {
+    p {
+        font-size: 1.0625em; /* 17px */
     }
 
-    h3 {
-        font-size: 1.4em;
+    h1 {
+        font-size: 1.1875em; /* 19px */
     }
 }
