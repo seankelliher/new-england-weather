@@ -5,10 +5,10 @@ Interactive component that displays current weather in New England state capitol
 
 ## Project Screen Shots
 
-* Starting view - with both Fahrenheit and Celsius.
+* Several locations - with Metric units.
 ![screen shot of project](/screenshots/new-england-weather-screenshot1.png?s=600)
 
-* View with Celsius only.
+* Several locations - with Imperial units.
 ![screen shot of project](/screenshots/new-england-weather-screenshot2.png?s=600)
 
 ## Installation and Setup Instructions
