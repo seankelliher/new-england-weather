@@ -10,7 +10,6 @@ import {
 
 // When DOM loads...
 document.addEventListener("DOMContentLoaded", function () {
-    "use strict";
 
     const stations = ["KAUG", "KBOS", "KCON", "KHFD", "KMPV", "KPVD"];
 
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetchWeather(station);
     });
 
-    //Set date and time when DOM loads.
+    //Set date and time.
     getDateAndTime();
 
     // Update date and time every 10 seconds.
@@ -33,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the div with the "metric" and "imperial" buttons.
     const units = document.querySelector(".units");
 
-    // Add an event listener. Users can select preferred units, if desired.
+    // Monitor metric & imperial buttons.
+    // User clicks imperial button, show imperial units, hide metric units.
+    // User clicks metric button, show metric units, hide imperial units.
     // Preference added to localStorage for return visits.
-    // Metric is the default unit, set in app/elements.js.
+    // User does nothing, default unit is metric, set in app/elements.js.
     units.addEventListener("click", function (event) {
         if (event.target.id === "metric-btn") {
             hideImperial();

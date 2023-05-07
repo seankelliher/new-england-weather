@@ -1,6 +1,7 @@
 import {completeElements} from "./elements.js";
 
 function fetchWeather(station) {
+    // Fetch data from the NWS. Six calls, one for each station.
     const apiBase = `https://api.weather.gov/stations/${station}/`;
     const apiLatest = "observations/latest?require_qc=false";
     const apiUrl = `${apiBase}${apiLatest}`;
@@ -13,8 +14,8 @@ function fetchWeather(station) {
     }).then(function (data) {
         const temperature = data.properties.temperature.value;
         const condition = data.properties.textDescription.toLowerCase();
-        const windSpeed = data.properties.windSpeed.value; //if zero?
-        const windDirection = data.properties.windDirection.value; //if null?
+        const windSpeed = data.properties.windSpeed.value;
+        const windDirection = data.properties.windDirection.value;
         const dewpoint = data.properties.dewpoint.value;
         const relativeHumidity = data.properties.relativeHumidity.value;
         completeElements(
@@ -27,7 +28,8 @@ function fetchWeather(station) {
             relativeHumidity
         );
     }).catch(function (error) {
-        // Get the City, State with the error and display an error message.
+        // Get the city, state and display an error message.
+        // For example, Boston, Massachusetts is currently unavailable.
         const eStation = `${station}`;
         const eStationLc = eStation.toLowerCase();
         const eSection = document.getElementById(eStationLc);

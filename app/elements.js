@@ -6,8 +6,6 @@ import {
 } from "./choose-units.js";
 
 function createElements(station) {
-    "use strict";
-
     // Get main element.
     const main = document.querySelector("main");
 
@@ -56,7 +54,6 @@ function completeElements (
     windDirectection,
     dewpoint,
     relativeHumidity) {
-    "use strict";
 
     // TEMP - create elements.
     const temp = document.createElement("p");

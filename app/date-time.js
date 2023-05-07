@@ -14,11 +14,9 @@ function getDateAndTime() {
     const dateSpace = document.getElementById("date-space");
     const timeSpace = document.getElementById("time-space");
 
-    // Display them.
+    // Display them at top of app's page.
     dateSpace.textContent = displayDate;
     timeSpace.textContent = displayTime;
-
-    //console.log(displayTime, displayDate);
 }
 
 export {getDateAndTime};

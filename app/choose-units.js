@@ -1,4 +1,10 @@
-// Show the units.
+// Some weather data like humidity uses universal units such as percent.
+// Temperature, dewpoint, wind speed - use metric or imperial units.
+// NWS's API returns metric data. App coverts data to imperial. 
+// Both units get stored in spans.
+// Below functions show/hide spans based on unit a user selects.
+
+// Functions to show metric or imperial units.
 function showImperial() {
     const imperial = document.querySelectorAll(".imperial");
     const imperialArray = Array.from(imperial);
@@ -7,8 +13,8 @@ function showImperial() {
         imp.style.display = "inline";
     });
 
-    const btnImp = document.getElementById("imperial-btn");
-    btnImp.style.background = "#F0432A"; /* bright pink */
+    const btnImp = document.getElementById("imperial-btn"); // imperial button.
+    btnImp.style.background = "#f0432a"; // orange, selected.
 }
 
 function showMetric() {
@@ -19,11 +25,11 @@ function showMetric() {
         met.style.display = "inline";
     });
 
-    const btnMet = document.getElementById("metric-btn");
-    btnMet.style.background = "#F0432A"; /* bright pink */
+    const btnMet = document.getElementById("metric-btn"); // metric button.
+    btnMet.style.background = "#f0432a"; // orange, selected.
 }
 
-// Hide the units.
+// Functions to hide metric or imperial units.
 function hideImperial() {
     const imperial = document.querySelectorAll(".imperial");
     const imperialArray = Array.from(imperial);
@@ -32,8 +38,8 @@ function hideImperial() {
         imp.style.display = "none";
     });
 
-    const btnImp = document.getElementById("imperial-btn");
-    btnImp.style.background = "#6E4828"; // lighter, not selected pink.
+    const btnImp = document.getElementById("imperial-btn"); // imperial button.
+    btnImp.style.background = "#6e4828"; // brown, not selected.
 }
 
 function hideMetric() {
@@ -44,8 +50,8 @@ function hideMetric() {
         met.style.display = "none";
     });
 
-    const btnMet = document.getElementById("metric-btn");
-    btnMet.style.background = "#6E4828"; // lighter, not selected pink.
+    const btnMet = document.getElementById("metric-btn"); // metric button.
+    btnMet.style.background = "#6e4828"; // brown, not selected.
 }
 
 export {showImperial, showMetric, hideImperial, hideMetric};
