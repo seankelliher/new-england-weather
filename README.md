@@ -13,7 +13,7 @@ App that displays current weather in New England state capitols. [View working c
 
 ## Installation and Setup Instructions
 
-All you need is a web browser. However, app uses ES6 modules. Developing locally may require disabling your browser's local file restrictions.
+This is a static component. Simply open the `index.html` file in your browser. However, component uses ES6 modules. Developing locally may require disabling your browser's local file restrictions.
 
 ## Reflection
 
