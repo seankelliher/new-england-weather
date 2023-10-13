@@ -61,25 +61,25 @@ button {
     font-weight: 600;
 }
 
-@media (300px >= width <= 399px) {
+@media (min-width: 300px) and (max-width: 399px) {
     button {
         font-size: 0.875em; /* 14px */
     }
 }
 
-@media (400px >= width <= 499px) {
+@media (min-width: 400px) and (max-width: 499px) {
     button {
         font-size: 0.9375em; /* 15px */
     }
 }
 
-@media (500px >= width <= 599px) {
+@media (min-width: 500px) and (max-width: 599px) {
     button {
         font-size: 1em; /* 16px */
     }
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
     button {
         font-size: 1.0625em; /* 17px */
     }
@@ -136,25 +136,25 @@ dd {
     margin: 0;
 }
 
-@media (300px >= width <= 399px) {
+@media (min-width: 300px) and (max-width: 399px) {
     p, dt, dd {
         font-size: 0.875em; /* 14px */
     }
 }
 
-@media (400px >= width <= 499px) {
+@media (min-width: 400px) and (max-width: 499px) {
     p, dt, dd {
         font-size: 0.9375em; /* 15px */
     }
 }
 
-@media (500px >= width <= 599px) {
+@media (min-width: 500px) and (max-width: 599px) {
     p, dt, dd {
         font-size: 1em; /* 16px */
     }
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
     p, dt, dd {
         font-size: 1.0625em; /* 17px */
     }
