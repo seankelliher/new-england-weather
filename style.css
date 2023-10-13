@@ -13,37 +13,15 @@ body {
     align-items: flex-start; /* cross axis */
 }
 
-.date-time {
+header {
     width: 90%;
     margin: 0;
     padding: 0 5%;
-    background: #122459; /* dark blue */
     flex: initial; /* flex: 0 1 auto */
-    position: relative;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start; /* main axis */
+    justify-content: space-between; /* main axis */
     align-items: flex-start; /* cross axis */
-}
-
-.date-time::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2000px;
-    left: 100%;
-    background: #122459; /* dark blue */
-}
-
-.date-time::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2000px;
-    right: 100%;
-    background: #122459; /* dark blue */
 }
 
 .date {
@@ -61,39 +39,9 @@ body {
     flex: initial; /* flex: 0 1 auto */
 }
 
-header {
+nav {
     width: 90%;
     margin: 0;
-    padding: 0 5%;
-    background: #c9e7f2;  /* light sky blue */
-    flex: initial; /* flex: 0 1 auto */
-    position: relative;
-    text-align: center;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2000px;
-    left: 100%;
-    background: #c9e7f2;  /* light sky blue */
-}
-
-header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2000px;
-    right: 100%;
-    background: #c9e7f2;  /* light sky blue */
-}
-
-.units {
-    width: 90%;
-    margin: 1em 0;
     padding: 0.5em 5%;
     flex: initial; /* flex: 0 1 auto */
     display: flex;
@@ -148,107 +96,66 @@ main {
     flex: initial; /* flex: 0 1 auto */
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between; /* main axis */
+    justify-content: center; /* main axis */
     align-items: stretch; /* cross axis */
 }
 
 section {
+    width: 80%;
+    margin: 1em 0;
+    padding: 0 5%;
     flex: initial; /* flex: 0 1 auto */
-    background: #c9e7f2;  /* light sky blue */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start; /* main axis */
+    align-items: flex-start; /* cross axis */
+    background: #e9f1ff;
     border-radius: 15px;
-}
-
-@media (300px >= width <= 399px) {
-    section {
-        width: 85%;
-        margin: 0 2.5% 1em; /* longhand is 0 2.5% 1em 2.5% */
-        padding: 0.5em 5%;
-    }
-}
-
-@media (400px >= width <= 499px) {
-    section {
-        width: 80%;
-        margin: 0 5% 1em; /* longhand is 0 5% 1em 5% */
-        padding: 0.5em 5%;
-    }
-}
-
-@media (500px >= width <= 599px) {
-    section {
-        width: 75%;
-        margin: 0 7.5% 1em; /* longhand is 0 7.5% 1em 7.5% */
-        padding: 0.5em 5%;
-    }
-}
-
-@media (width >= 600px) {
-    section {
-        width: 70%;
-        margin: 0 10% 1em; /* longhand is 0 10% 1em 10% */
-        padding: 0.5em 5%;
-    }
 }
 
 /* Fonts */
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 500;
+    color: #1a1c1e;
 }
 
-h1 {
+dt {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
-}
-
-.lite-txt {
-    color: #fff;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-.emphasis {
-    color: #122459; /* dark blue */
     font-weight: 500;
+    color: #001d35;
+}
+
+dd {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 400;
+    color: #001d35;
+    margin: 0;
 }
 
 @media (300px >= width <= 399px) {
-    p {
+    p, dt, dd {
         font-size: 0.875em; /* 14px */
-    }
-
-    h1 {
-        font-size: 1em; /* 16px */
     }
 }
 
 @media (400px >= width <= 499px) {
-    p {
+    p, dt, dd {
         font-size: 0.9375em; /* 15px */
-    }
-
-    h1 {
-        font-size: 1.0625em; /* 17px */
     }
 }
 
 @media (500px >= width <= 599px) {
-    p {
+    p, dt, dd {
         font-size: 1em; /* 16px */
-    }
-
-    h1 {
-        font-size: 1.125em; /* 18px */
     }
 }
 
 @media (width >= 600px) {
-    p {
+    p, dt, dd {
         font-size: 1.0625em; /* 17px */
-    }
-
-    h1 {
-        font-size: 1.1875em; /* 19px */
     }
 }

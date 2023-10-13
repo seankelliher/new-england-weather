@@ -11,11 +11,11 @@ function createElements(station) {
 
     // Create needed elements.
     const section = document.createElement("section");
-    const loc = document.createElement("p");
-    loc.classList.add("emphasis");
+    const list = document.createElement("dl");
+    const loc = document.createElement("dt");
 
     // Assign id to section.
-    section.id = station.toLowerCase();
+    list.id = station.toLowerCase();
 
     // Assign content to location.
     switch (station) {
@@ -42,7 +42,8 @@ function createElements(station) {
     }
 
     // Append elements.
-    section.appendChild(loc);
+    list.appendChild(loc);
+    section.appendChild(list);
     main.appendChild(section);
 }
 
@@ -56,7 +57,7 @@ function completeElements (
     relativeHumidity) {
 
     // TEMP - create elements.
-    const temp = document.createElement("p");
+    const temp = document.createElement("dd");
     const tempC = document.createElement("span");
     const tempF = document.createElement("span");
 
@@ -81,7 +82,7 @@ function completeElements (
     temp.appendChild(tempF);
 
     // CONDITION - create element.
-    const cond = document.createElement("p");
+    const cond = document.createElement("dd");
 
     // CONDITION - append content.
     if (condition === "") {
@@ -91,7 +92,7 @@ function completeElements (
     }
 
     // WIND - create elements.
-    const wind = document.createElement("p");
+    const wind = document.createElement("dd");
     const windSpeedKm = document.createElement("span");
     const windSpeedMi = document.createElement("span");
     const windDirect = document.createElement("span");
@@ -141,7 +142,7 @@ function completeElements (
     wind.appendChild(windDirect);
 
     // DEWPOINT & HUMIDITY  - create elements.
-    const dewHum = document.createElement("p");
+    const dewHum = document.createElement("dd");
     const dewC = document.createElement("span");
     const dewF = document.createElement("span");
     const humid = document.createElement("span");

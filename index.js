@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.setInterval(getDateAndTime, 10000);
 
     // Get the div with the "metric" and "imperial" buttons.
-    const units = document.querySelector(".units");
+    const units = document.querySelector("nav");
 
     // Monitor metric & imperial buttons.
     // User clicks imperial button, show imperial units, hide metric units.

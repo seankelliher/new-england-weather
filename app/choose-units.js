@@ -14,7 +14,8 @@ function showImperial() {
     });
 
     const btnImp = document.getElementById("imperial-btn"); // imperial button.
-    btnImp.style.background = "#f0432a"; // orange, selected.
+    btnImp.style.background = "#ffdcc0"; // selected.
+    btnImp.style.color = "#2d1600"; // selected.
 }
 
 function showMetric() {
@@ -26,7 +27,8 @@ function showMetric() {
     });
 
     const btnMet = document.getElementById("metric-btn"); // metric button.
-    btnMet.style.background = "#f0432a"; // orange, selected.
+    btnMet.style.background = "#ffdcc0"; // selected.
+    btnMet.style.color = "#2d1600"; // selected.
 }
 
 // Functions to hide metric or imperial units.
@@ -39,7 +41,8 @@ function hideImperial() {
     });
 
     const btnImp = document.getElementById("imperial-btn"); // imperial button.
-    btnImp.style.background = "#6e4828"; // brown, not selected.
+    btnImp.style.background = "#e9f1ff"; // not selected.
+    btnImp.style.color = "#001d35"; // not selected.
 }
 
 function hideMetric() {
@@ -51,7 +54,8 @@ function hideMetric() {
     });
 
     const btnMet = document.getElementById("metric-btn"); // metric button.
-    btnMet.style.background = "#6e4828"; // brown, not selected.
+    btnMet.style.background = "#e9f1ff"; // not selected.
+    btnMet.style.color = "#001d35"; // not selected.
 }
 
 export {showImperial, showMetric, hideImperial, hideMetric};
