@@ -19,4 +19,4 @@ function getDateAndTime() {
     timeSpace.textContent = displayTime;
 }
 
-export {getDateAndTime};
+export { getDateAndTime };

@@ -1,4 +1,4 @@
-import {completeElements} from "./elements.js";
+import { completeElements } from "./elements.js";
 
 function fetchWeather(station) {
     // Fetch data from the NWS. Six calls, one for each station.
@@ -40,4 +40,4 @@ function fetchWeather(station) {
     });
 }
 
-export {fetchWeather};
+export { fetchWeather };

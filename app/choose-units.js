@@ -58,4 +58,4 @@ function hideMetric() {
     btnMet.style.color = "#001d35"; // not selected.
 }
 
-export {showImperial, showMetric, hideImperial, hideMetric};
+export { showImperial, showMetric, hideImperial, hideMetric };

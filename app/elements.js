@@ -198,4 +198,4 @@ function completeElements (
     }
 }
 
-export {createElements, completeElements};
+export { createElements, completeElements };

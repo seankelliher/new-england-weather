@@ -1,6 +1,6 @@
-import {getDateAndTime} from "./app/date-time.js";
-import {createElements} from "./app/elements.js";
-import {fetchWeather} from "./app/api.js";
+import { getDateAndTime } from "./app/date-time.js";
+import { createElements } from "./app/elements.js";
+import { fetchWeather } from "./app/api.js";
 import {
     showImperial,
     showMetric,
