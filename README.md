@@ -5,7 +5,7 @@ App that displays current weather in New England state capitols. [View working c
 
 ## Project Status
 
-Next steps, I want to do more extensive accessibility and browser testing. Also, I would like to expand the number of locations and offer users the ability to select the locations displayed.
+Project meets general accessibility (WACG) and cross-browser requirements. More testing with a dedicated services (e.g., Sauce Labs) would be helpful if deploying to production.
 
 ## Project Screen Shots
 
