@@ -69,7 +69,7 @@ function completeElements (
     const tempConvertToF = (Math.round(temperature * 1.8) + 32);
 
     // TEMP - append content.
-    if (temperature === "") {
+    if (temperature === null || temperature === "") {
         tempC.textContent = "Temperature is unavailable.";
         tempF.textContent = "Temperature is unavailable.";
     } else {
@@ -85,7 +85,7 @@ function completeElements (
     const cond = document.createElement("dd");
 
     // CONDITION - append content.
-    if (condition === "") {
+    if (condition === null || condition === "") {
         cond.textContent = "Current conditions are unavailable.";
     } else {
         cond.textContent = `Current conditions are ${condition}.`;
@@ -104,10 +104,10 @@ function completeElements (
     // WINDSPEED - tidy windSpeed.
     let wsKm;
     let wsMi;
-    if (windSpeed < 1 || windSpeed === null) {
+    if (windSpeed < 1) {
         wsKm = "Winds are calm";
         wsMi = "Winds are calm";
-    } else if (windSpeed === "") {
+    } else if (windSpeed === null || windSpeed === "") {
         wsKm = "Winds are unavailable.";
         wsMi = "Winds are unavailable.";
     } else {
@@ -127,10 +127,8 @@ function completeElements (
         wd = " from the Southwest.";
     } else if (windDirectection > 270 && windDirectection <= 360) {
         wd = " from the Northwest.";
-    } else if (windDirectection === null) {
-        wd = "with no direction.";
     } else {
-        wd = "wind direction unavailable.";
+        wd = " (wind direction unavailable)";
     }
 
     // WIND - append content, elements.
@@ -155,7 +153,7 @@ function completeElements (
     const dewConvertToF = (Math.round(dewpoint * 1.8) + 32);
 
     // DEWPOINT - append content.
-    if (dewpoint === "") {
+    if (dewpoint === null || dewpoint === "") {
         dewC.textContent = "Dewpoint is unavailable.";
         dewF.textContent = "Dewpoint is unavailable.";
     } else{
@@ -170,8 +168,8 @@ function completeElements (
 
     // HUMIDITY - append content, elements.
     const rh = Math.round(relativeHumidity);
-    if (relativeHumidity === "") {
-        humid.textContent = "Humidity is unavailable.";
+    if (relativeHumidity === null || relativeHumidity === "") {
+        humid.textContent = " Humidity is unavailable.";
     } else {
         humid.textContent = ` Humidity is ${rh}%.`;
     }
