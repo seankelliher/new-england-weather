@@ -113,6 +113,10 @@ section {
     border-radius: 15px;
 }
 
+section:last-child {
+    margin-bottom: 2em;
+}
+
 /* Fonts */
 p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
